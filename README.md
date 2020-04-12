@@ -1,5 +1,7 @@
 # QuickConstraint
 
+[![Build Status](https://travis-ci.com/nakkht/quick-constraint.svg?branch=develop)](https://travis-ci.com/nakkht/quick-constraint)
+
 Extension functions for making layout programmatically easier and faster
 
 ## Author
