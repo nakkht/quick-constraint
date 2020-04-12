@@ -1,0 +1,32 @@
+os: osx
+osx_image: xcode11.3
+language: swift
+
+env:
+  global:
+    - LC_CTYPE=en_US.UTF-8
+    - LANG=en_US.UTF-8
+
+branches:
+  only:
+  - master
+  - develop
+
+before_install:
+  - gem install xcpretty --no-document --quiet
+  - xcpretty --version
+
+jobs:
+  include:
+    - stage: build
+      script:
+        - xcodebuild clean build -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1' | xcpretty -c
+        - xcodebuild clean build -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' | xcpretty -c
+
+    - stage: test
+      script:
+        - xcodebuild test -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1' | xcpretty -c
+        - xcodebuild test -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' | xcpretty -c
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -J 'Logr'

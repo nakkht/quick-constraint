@@ -14,10 +14,6 @@ let package = Package(
     targets: [
         .target(name: "QuickConstraint",
                 path: ".",
-                sources: ["Sources"]),
-        .testTarget(name: "QuickConstraintTests",
-                    dependencies: ["QuickConstraint"],
-                    path: ".",
-                    sources: ["Tests"])
+                sources: ["Sources"])
     ]
 )
