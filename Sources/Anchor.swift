@@ -14,15 +14,14 @@
 // limitations under the License.
 //  
 
-import UIKit
-
-extension UIScreen {
+enum Anchor {
+    case all, top, bottom, leading, trailing, vertical, horizontal
     
-    static func width(_ fraction: CGFloat) -> CGFloat {
-        return UIScreen.main.bounds.size.width * fraction
+    enum Dimension {
+        case width, height
     }
     
-    static func height(_ fraction: CGFloat) -> CGFloat {
-        return UIScreen.main.bounds.size.height * fraction
+    enum Center {
+        case x, y
     }
 }

@@ -18,16 +18,16 @@ import UIKit
 
 extension UIView {
     
-    func pin(to view: UIView, anchor: LayoutAnchor = .all, margin: CGFloat = 0) {
+    func pin(to view: UIView, anchor: Anchor = .all, margin: CGFloat = 0) {
         pin(toGuide: view, anchor: anchor, margin: margin)
     }
     
     @available(iOS 11.0, *)
-    func pin(toSafeAreaOf view: UIView, anchor: LayoutAnchor = .all, margin: CGFloat = 0) {
+    func pin(toSafeAreaOf view: UIView, anchor: Anchor = .all, margin: CGFloat = 0) {
         pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin)
     }
     
-    private func pin(toGuide guide: AnyObject, anchor: LayoutAnchor = .all, margin: CGFloat) {
+    private func pin(toGuide guide: AnyObject, anchor: Anchor = .all, margin: CGFloat) {
         let top = (anchor == .all || anchor == .top || anchor == .vertical)
         let bottom = (anchor == .all || anchor == .bottom || anchor == .vertical)
         let leading = (anchor == .all || anchor == .leading || anchor == .horizontal)
@@ -39,7 +39,7 @@ extension UIView {
         trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -margin).isActive = trailing
     }
     
-    func set(_ dimension: LayoutAnchor.Dimension, _ value: CGFloat ) {
+    func set(_ dimension: Anchor.Dimension, _ value: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: value).isActive = (dimension == .width)
         heightAnchor.constraint(equalToConstant: value).isActive = (dimension == .height)
@@ -57,7 +57,7 @@ extension UIView {
         center(to: view, axis: .y)
     }
     
-    func center(to view: UIView, axis: LayoutAnchor.Center) {
+    func center(to view: UIView, axis: Anchor.Center) {
         translatesAutoresizingMaskIntoConstraints = false
         centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = (axis == .x)
         centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = (axis == .y)
