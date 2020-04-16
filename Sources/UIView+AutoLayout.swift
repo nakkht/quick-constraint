@@ -18,10 +18,12 @@ import UIKit
 
 extension UIView {
     
+    @inline(__always)
     func pin(to view: UIView, anchor: Anchor = .all, margin: CGFloat = 0) {
         pin(toGuide: view, anchor: anchor, margin: margin)
     }
     
+    @inline(__always)
     @available(iOS 11.0, *)
     func pin(toSafeAreaOf view: UIView, anchor: Anchor = .all, margin: CGFloat = 0) {
         pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin)
@@ -39,24 +41,28 @@ extension UIView {
         trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -margin).isActive = trailing
     }
     
+    @inline(__always)
     func set(_ dimension: Dimension, _ value: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: value).isActive = (dimension == .width)
         heightAnchor.constraint(equalToConstant: value).isActive = (dimension == .height)
     }
     
+    @inline(__always)
     func setSize(_ width: CGFloat, _ height: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         set(.width, width)
         set(.height, height)
     }
     
+    @inline(__always)
     func center(to view: UIView) {
         translatesAutoresizingMaskIntoConstraints = false
         center(to: view, axis: .x)
         center(to: view, axis: .y)
     }
     
+    @inline(__always)
     func center(to view: UIView, axis: Axis) {
         translatesAutoresizingMaskIntoConstraints = false
         centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = (axis == .x)
