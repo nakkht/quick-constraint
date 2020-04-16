@@ -14,6 +14,6 @@
 // limitations under the License.
 //  
 
-enum Anchor {
-    case all, top, bottom, leading, trailing, vertical, horizontal
+enum Axis {
+    case x, y
 }

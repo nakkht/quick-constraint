@@ -39,7 +39,7 @@ extension UIView {
         trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -margin).isActive = trailing
     }
     
-    func set(_ dimension: Anchor.Dimension, _ value: CGFloat) {
+    func set(_ dimension: Dimension, _ value: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: value).isActive = (dimension == .width)
         heightAnchor.constraint(equalToConstant: value).isActive = (dimension == .height)
@@ -57,7 +57,7 @@ extension UIView {
         center(to: view, axis: .y)
     }
     
-    func center(to view: UIView, axis: Anchor.Center) {
+    func center(to view: UIView, axis: Axis) {
         translatesAutoresizingMaskIntoConstraints = false
         centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = (axis == .x)
         centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = (axis == .y)
