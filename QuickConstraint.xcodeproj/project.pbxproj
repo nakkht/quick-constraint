@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		OBJ_23 /* LayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* LayoutAnchor.swift */; };
-		OBJ_24 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* UIView+AutoLayout.swift */; };
+		765A81AA244CFEAF00AA8E73 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A81A5244CFEAF00AA8E73 /* Dimension.swift */; };
+		765A81AB244CFEAF00AA8E73 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A81A6244CFEAF00AA8E73 /* Anchor.swift */; };
+		765A81AC244CFEAF00AA8E73 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A81A7244CFEAF00AA8E73 /* Axis.swift */; };
+		765A81AD244CFEAF00AA8E73 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A81A8244CFEAF00AA8E73 /* UIStackView.swift */; };
+		765A81AE244CFEAF00AA8E73 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A81A9244CFEAF00AA8E73 /* UIView+AutoLayout.swift */; };
 		OBJ_31 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		765A81A5244CFEAF00AA8E73 /* Dimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
+		765A81A6244CFEAF00AA8E73 /* Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
+		765A81A7244CFEAF00AA8E73 /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
+		765A81A8244CFEAF00AA8E73 /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		765A81A9244CFEAF00AA8E73 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		OBJ_10 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_11 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		OBJ_13 /* LayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchor.swift; sourceTree = "<group>"; };
-		OBJ_14 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -37,8 +43,11 @@
 		OBJ_12 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* LayoutAnchor.swift */,
-				OBJ_14 /* UIView+AutoLayout.swift */,
+				765A81A6244CFEAF00AA8E73 /* Anchor.swift */,
+				765A81A7244CFEAF00AA8E73 /* Axis.swift */,
+				765A81A5244CFEAF00AA8E73 /* Dimension.swift */,
+				765A81A8244CFEAF00AA8E73 /* UIStackView.swift */,
+				765A81A9244CFEAF00AA8E73 /* UIView+AutoLayout.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -58,7 +67,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -66,7 +75,6 @@
 				OBJ_15 /* Tests */,
 				OBJ_16 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -122,6 +130,11 @@
 			attributes = {
 				LastSwiftMigration = 9999;
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"QuickConstraint::QuickConstraint" = {
+						LastSwiftMigration = 1140;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "QuickConstraint" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -130,7 +143,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,8 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_23 /* LayoutAnchor.swift in Sources */,
-				OBJ_24 /* UIView+AutoLayout.swift in Sources */,
+				765A81AE244CFEAF00AA8E73 /* UIView+AutoLayout.swift in Sources */,
+				765A81AB244CFEAF00AA8E73 /* Anchor.swift in Sources */,
+				765A81AC244CFEAF00AA8E73 /* Axis.swift in Sources */,
+				765A81AA244CFEAF00AA8E73 /* Dimension.swift in Sources */,
+				765A81AD244CFEAF00AA8E73 /* UIStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +181,8 @@
 		OBJ_20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -184,6 +202,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = QuickConstraint;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -194,6 +213,8 @@
 		OBJ_21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
