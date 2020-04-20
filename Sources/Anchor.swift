@@ -14,6 +14,34 @@
 // limitations under the License.
 //  
 
-enum Anchor {
+public enum Anchor {
     case all, top, bottom, leading, trailing, vertical, horizontal
+    
+    var isTop: Bool {
+        switch self {
+        case .top, .all, .vertical: return true
+        default: return false
+        }
+    }
+    
+    var isBottom: Bool {
+        switch self {
+        case .bottom, .all, .vertical: return true
+        default: return false
+        }
+    }
+    
+    var isLeading: Bool {
+        switch self {
+        case .leading, .all, .horizontal: return true
+        default: return false
+        }
+    }
+    
+    var isTrailing: Bool {
+        switch self {
+        case .trailing, .all, .horizontal: return true
+        default: return false
+        }
+    }
 }

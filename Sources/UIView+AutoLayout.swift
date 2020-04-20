@@ -16,56 +16,48 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     @inline(__always)
-    func pin(to view: UIView, anchor: Anchor = .all, margin: CGFloat = 0) {
-        pin(toGuide: view, anchor: anchor, margin: margin)
+    @discardableResult
+    func pin(to view: UIView, anchor: Anchor = .all, margin: CGFloat = 0) -> [NSLayoutConstraint] {
+        if #available(iOS 11.0, *) {
+            return pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin)
+        } else {
+            return pin(toGuide: view, anchor: anchor, margin: margin)
+        }
     }
     
-    @inline(__always)
-    @available(iOS 11.0, *)
-    func pin(toSafeAreaOf view: UIView, anchor: Anchor = .all, margin: CGFloat = 0) {
-        pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin)
-    }
-    
-    private func pin(toGuide guide: AnyObject, anchor: Anchor = .all, margin: CGFloat) {
-        let top = (anchor == .all || anchor == .top || anchor == .vertical)
-        let bottom = (anchor == .all || anchor == .bottom || anchor == .vertical)
-        let leading = (anchor == .all || anchor == .leading || anchor == .horizontal)
-        let trailing = (anchor == .all || anchor == .trailing || anchor == .horizontal)
+    private func pin(toGuide guide: AnyObject, anchor: Anchor = .all, margin: CGFloat) -> [NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
-        topAnchor.constraint(equalTo: guide.topAnchor, constant: margin).isActive = top
-        bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -margin).isActive = bottom
-        leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: margin).isActive = leading
-        trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -margin).isActive = trailing
+        var constraints = [NSLayoutConstraint]()
+        if anchor.isTop { constraints.append(topAnchor.constraint(equalTo: guide.topAnchor, constant: margin)) }
+        if anchor.isBottom { constraints.append(bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -margin)) }
+        if anchor.isLeading { constraints.append(leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: margin)) }
+        if anchor.isTrailing { constraints.append(trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -margin)) }
+        NSLayoutConstraint.activate(constraints)
+        return constraints
     }
     
     @inline(__always)
-    func set(_ dimension: Dimension, _ value: CGFloat) {
+    @discardableResult
+    func set(_ dimension: Dimension, _ value: CGFloat) -> [NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
-        widthAnchor.constraint(equalToConstant: value).isActive = (dimension == .width)
-        heightAnchor.constraint(equalToConstant: value).isActive = (dimension == .height)
+        var constraints = [NSLayoutConstraint]()
+        if dimension.isWidth { constraints.append(widthAnchor.constraint(equalToConstant: value)) }
+        if dimension.isHeight { constraints.append(heightAnchor.constraint(equalToConstant: value)) }
+        NSLayoutConstraint.activate(constraints)
+        return constraints
     }
     
     @inline(__always)
-    func setSize(_ width: CGFloat, _ height: CGFloat) {
+    @discardableResult
+    func center(to view: UIView, axis: Axis) -> [NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
-        set(.width, width)
-        set(.height, height)
-    }
-    
-    @inline(__always)
-    func center(to view: UIView) {
-        translatesAutoresizingMaskIntoConstraints = false
-        center(to: view, axis: .x)
-        center(to: view, axis: .y)
-    }
-    
-    @inline(__always)
-    func center(to view: UIView, axis: Axis) {
-        translatesAutoresizingMaskIntoConstraints = false
-        centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = (axis == .x)
-        centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = (axis == .y)
+        var constraints = [NSLayoutConstraint]()
+        if axis.isX { constraints.append(centerXAnchor.constraint(equalTo: view.centerXAnchor)) }
+        if axis.isY { constraints.append(centerYAnchor.constraint(equalTo: view.centerYAnchor)) }
+        NSLayoutConstraint.activate(constraints)
+        return constraints
     }
 }

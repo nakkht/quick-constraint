@@ -16,7 +16,7 @@
 
 import UIKit
 
-extension UIStackView {
+public extension UIStackView {
     
     convenience init(axis: NSLayoutConstraint.Axis, distribution: UIStackView.Distribution, spacing: CGFloat = 0) {
         self.init()

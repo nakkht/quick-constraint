@@ -14,6 +14,20 @@
 // limitations under the License.
 //  
 
-enum Dimension {
-    case width, height
+public enum Dimension {
+    case width, height, all
+    
+    var isWidth: Bool {
+        switch self {
+        case .width, .all: return true
+        default: return false
+        }
+    }
+    
+    var isHeight: Bool {
+        switch self {
+        case .height, .all: return true
+        default: return false
+        }
+    }
 }

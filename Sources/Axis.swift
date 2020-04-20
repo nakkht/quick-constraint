@@ -14,6 +14,20 @@
 // limitations under the License.
 //  
 
-enum Axis {
-    case x, y
+public enum Axis {
+    case x, y, all
+    
+    var isX: Bool {
+        switch self {
+        case .x, .all: return true
+        default: return false
+        }
+    }
+    
+    var isY: Bool {
+        switch self {
+        case .y, .all: return true
+        default: return false
+        }
+    }
 }
