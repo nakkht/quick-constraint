@@ -28,6 +28,42 @@ public extension UIView {
         }
     }
     
+    @inline(__always)
+    @discardableResult
+    func pinTopToBottom(of view: UIView, margin: CGFloat = 0) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = topAnchor.constraint(equalTo: view.bottomAnchor, constant: margin)
+        constraint.isActive = true
+        return constraint
+    }
+    
+    @inline(__always)
+    @discardableResult
+    func pinBottomToTop(of view: UIView, margin: CGFloat = 0) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = bottomAnchor.constraint(equalTo: view.topAnchor, constant: -margin)
+        constraint.isActive = true
+        return constraint
+    }
+    
+    @inline(__always)
+    @discardableResult
+    func pinLeadingToTrailing(of view: UIView, margin: CGFloat = 0) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: margin)
+        constraint.isActive = true
+        return constraint
+    }
+    
+    @inline(__always)
+    @discardableResult
+    func pinTrailingToLeading(of view: UIView, margin: CGFloat = 0) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = trailingAnchor.constraint(equalTo: view.leadingAnchor, constant: -margin)
+        constraint.isActive = true
+        return constraint
+    }
+    
     private func pin(toGuide guide: AnyObject, anchor: Anchor = .all, margin: CGFloat) -> [NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
         var constraints = [NSLayoutConstraint]()
