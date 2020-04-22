@@ -2,6 +2,8 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.2.0 - [2020-xx-xx]
+
 ## v0.1.0 - [2020-04-22]
 
 Added:
