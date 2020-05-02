@@ -6,6 +6,7 @@ All notable changes to QuickConstraint project.
 
 Added:
 * Carthage support
+* tvOS support
 
 ## v0.1.0 - [2020-04-22]
 

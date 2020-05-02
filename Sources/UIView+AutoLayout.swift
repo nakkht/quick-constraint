@@ -21,7 +21,7 @@ public extension UIView {
     @inline(__always)
     @discardableResult
     func pin(to view: UIView, anchor: Anchor = .all, margin: CGFloat = 0) -> [NSLayoutConstraint] {
-        if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, tvOS 11.0, *) {
             return pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin)
         } else {
             return pin(toGuide: view, anchor: anchor, margin: margin)
