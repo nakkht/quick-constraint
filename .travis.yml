@@ -20,13 +20,13 @@ jobs:
   include:
     - stage: Build
       script:
-        - xcodebuild clean build -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1' | xcpretty -c
-        - xcodebuild clean build -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' | xcpretty -c
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1' clean build | xcpretty -c
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' clean build | xcpretty -c
 
     - stage: Test
       script:
-        - xcodebuild test -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1' | xcpretty -c
-        - xcodebuild test -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' | xcpretty -c
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1' test | xcpretty -c
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' test | xcpretty -c
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Logr'
