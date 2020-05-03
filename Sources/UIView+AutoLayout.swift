@@ -16,8 +16,15 @@
 
 import UIKit
 
+/// Provides convienience methods for using auto layout and constraining view to the parent
 public extension UIView {
     
+    /// The most basic and common constraints dedicated for constraining to all 4 anchors of the parent veiw: top, bottom. leading, trailing
+    /// - Parameters:
+    ///   - view: view  to which apply constaint. Can be parent view or view which shares the same parent.
+    ///   - anchor: anchor type to be used for determining which constraints to generate. Defaults to `all` and generates constaints to all 4 sides,`
+    ///   - margin: number of points to be used for generating margin for the view. Same value applied to all generated constraints.
+    /// - Returns: generated  active constraints.
     @inline(__always)
     @discardableResult
     func pin(to view: UIView, anchor: Anchor = .all, margin: CGFloat = 0) -> [NSLayoutConstraint] {
