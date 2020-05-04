@@ -14,9 +14,11 @@
 // limitations under the License.
 //  
 
+/// Enum providing definitions of dimension options
 public enum Dimension {
     case width, height, all
     
+    /// Determines whether or not enum instance involves width dimentsion
     var isWidth: Bool {
         switch self {
         case .width, .all: return true
@@ -24,6 +26,7 @@ public enum Dimension {
         }
     }
     
+    /// Determines whether or not enum instance involves height dimentsion
     var isHeight: Bool {
         switch self {
         case .height, .all: return true

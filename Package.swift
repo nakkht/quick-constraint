@@ -5,6 +5,7 @@ import PackageDescription
 let package = Package(
     name: "QuickConstraint",
     platforms: [
+        .macOS(.v10_11),
         .iOS(.v9),
         .tvOS(.v9)
     ],

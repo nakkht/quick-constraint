@@ -14,9 +14,11 @@
 // limitations under the License.
 //  
 
+/// Enum providing definitions of anchors, including combinations
 public enum Anchor {
     case all, top, bottom, leading, trailing, vertical, horizontal
     
+    /// Determines whether or not enum instance involves top anchor
     var isTop: Bool {
         switch self {
         case .top, .all, .vertical: return true
@@ -24,6 +26,7 @@ public enum Anchor {
         }
     }
     
+    /// Determines whether or not enum instance involves bottom anchor
     var isBottom: Bool {
         switch self {
         case .bottom, .all, .vertical: return true
@@ -31,6 +34,7 @@ public enum Anchor {
         }
     }
     
+    /// Determines whether or not enum instance involves leading anchor
     var isLeading: Bool {
         switch self {
         case .leading, .all, .horizontal: return true
@@ -38,6 +42,7 @@ public enum Anchor {
         }
     }
     
+    /// Determines whether or not enum instance involves trailing anchor
     var isTrailing: Bool {
         switch self {
         case .trailing, .all, .horizontal: return true

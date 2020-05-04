@@ -14,9 +14,11 @@
 // limitations under the License.
 //  
 
+/// Enum providing definitions of axis options
 public enum Axis {
     case x, y, all
     
+    /// Determines whether or not enum instance involves horizontal//x axis
     var isX: Bool {
         switch self {
         case .x, .all: return true
@@ -24,6 +26,7 @@ public enum Axis {
         }
     }
     
+    /// Determines whether or not enum instance involves vertical//y axis
     var isY: Bool {
         switch self {
         case .y, .all: return true
