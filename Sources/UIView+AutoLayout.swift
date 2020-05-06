@@ -21,10 +21,10 @@ public extension UIView {
     
     /// The most basic and common constraints dedicated for constraining to all 4 anchors of the parent veiw: top, bottom. leading, trailing
     /// - Parameters:
-    ///   - view: view  to which apply constaint. Can be parent view or view which shares the same parent.
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
     ///   - anchor: anchor type to be used for determining which constraints to generate. Defaults to `all` and generates constaints to all 4 sides,`
-    ///   - margin: number of points to be used for generating margin for the view. Same value applied to all generated constraints.
-    /// - Returns: generated  active constraints.
+    ///   - margin: number of points to be used for generating margin for the view. Same value applied to all generated constraints
+    /// - Returns: generated  active constraints
     @inline(__always)
     @discardableResult
     func pin(to view: UIView, anchor: Anchor = .all, margin: CGFloat = 0) -> [NSLayoutConstraint] {
@@ -35,6 +35,11 @@ public extension UIView {
         }
     }
     
+    /// Creates opposite constraints: source top anchor to bottom anchor of the target view
+    /// - Parameters:
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
+    ///   - margin: number of points to be used for generating margin for the view
+    /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
     func pinTopToBottom(of view: UIView, margin: CGFloat = 0) -> NSLayoutConstraint {
@@ -44,6 +49,11 @@ public extension UIView {
         return constraint
     }
     
+    /// Creates opposite constraints: source bottom anchor to top anchor of the target view
+    /// - Parameters:
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
+    ///   - margin: number of points to be used for generating margin for the view
+    /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
     func pinBottomToTop(of view: UIView, margin: CGFloat = 0) -> NSLayoutConstraint {
@@ -53,6 +63,11 @@ public extension UIView {
         return constraint
     }
     
+    /// Creates opposite constraints: source leading anchor to trailing anchor of the target view
+    /// - Parameters:
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
+    ///   - margin: number of points to be used for generating margin for the view
+    /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
     func pinLeadingToTrailing(of view: UIView, margin: CGFloat = 0) -> NSLayoutConstraint {
@@ -62,6 +77,11 @@ public extension UIView {
         return constraint
     }
     
+    /// Creates opposite constraints: source trailing anchor to leading anchor of the target view
+    /// - Parameters:
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
+    ///   - margin: number of points to be used for generating margin for the view
+    /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
     func pinTrailingToLeading(of view: UIView, margin: CGFloat = 0) -> NSLayoutConstraint {
@@ -82,6 +102,11 @@ public extension UIView {
         return constraints
     }
     
+    /// Creates constraints for width/height dimensions with specified size
+    /// - Parameters:
+    ///   - dimension: dimension type to be used for determining which constraints to generate. Use `all` to generate width and height constraints simultaneously
+    ///   - value: size of set dimensions
+    /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
     func set(_ dimension: Dimension, _ value: CGFloat) -> [NSLayoutConstraint] {
@@ -93,6 +118,11 @@ public extension UIView {
         return constraints
     }
     
+    /// Creates constraints based on center x and y axis
+    /// - Parameters:
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
+    ///   - axis: axis type to be used for determining which constraints to generate. Use `all` to generate center constraints for x and y axis simultaneously
+    /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
     func center(to view: UIView, axis: Axis) -> [NSLayoutConstraint] {
