@@ -16,11 +16,11 @@ jobs:
     - name: Build xcode 11.4
       osx_image: xcode11.4
       script:
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=11.2' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=12.4' clean build
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' clean build
 
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=AppleTVOS,OS=11.2' clean build
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=AppleTVOS,OS=latest' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=Apple TV,OS=12.4' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=Apple TV,OS=latest' clean build
 
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=OS X,arch=x86_64' clean build
 
@@ -30,7 +30,7 @@ jobs:
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=9.0' clean build
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 6 Pro,OS=10.3' clean build
 
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=AppleTVOS,OS=9.0' clean build
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=AppleTVOS,OS=10.3' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=Apple TV,OS=9.0' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=Apple TV,OS=10.3' clean build
 
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=OS X,arch=x86_64' clean build
