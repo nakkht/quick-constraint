@@ -1,5 +1,4 @@
 os: osx
-osx_image: xcode11.3
 language: swift
 
 env:
@@ -12,21 +11,26 @@ branches:
   - master
   - develop
 
-before_install:
-  - gem install xcpretty --no-document --quiet
-  - xcpretty --version
-
 jobs:
   include:
-    - stage: Build
+    - name: Build xcode 11.4
+      osx_image: xcode11.4
       script:
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1' clean build | xcpretty -c
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' clean build | xcpretty -c
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=11.2' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' clean build
 
-    - stage: Test
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=AppleTVOS,OS=11.2' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=AppleTVOS,OS=latest' clean build
+
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=OS X,arch=x86_64' clean build
+
+    - name: Build xcode 10.2
+      osx_image: xcode10.2
       script:
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1' test | xcpretty -c
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' test | xcpretty -c
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=9.0' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 6 Pro,OS=10.3' clean build
 
-after_success:
-  - bash <(curl -s https://codecov.io/bash) -J 'Logr'
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=AppleTVOS,OS=9.0' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=AppleTVOS,OS=10.3' clean build
+
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=OS X,arch=x86_64' clean build
