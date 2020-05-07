@@ -14,26 +14,42 @@
 // limitations under the License.
 //  
 
+#if os(iOS) || os(tvOS)
 import UIKit
 
-public extension UIStackView {
+public typealias Alignment = UIStackView.Alignment
+public typealias StackView = UIStackView
+public typealias StackAxis = NSLayoutConstraint.Axis
+#else
+import AppKit
+
+public typealias Alignment = NSLayoutConstraint.Attribute
+public typealias StackView = NSStackView
+public typealias StackAxis = NSUserInterfaceLayoutOrientation
+#endif
+
+public extension StackView {
     
-    convenience init(axis: NSLayoutConstraint.Axis, alignment: Alignment, distribution: UIStackView.Distribution, spacing: CGFloat = 0) {
+    convenience init(axis: StackAxis, alignment: Alignment, distribution: Distribution, spacing: CGFloat = 0) {
         self.init()
         self.translatesAutoresizingMaskIntoConstraints = false
         self.alignment = alignment
-        self.axis = axis
         self.distribution = distribution
         self.spacing = spacing
+        #if os(iOS) || os(tvOS)
+        self.axis = axis
+        #else
+        self.orientation = axis
+        #endif
     }
     
     @inline(__always)
-    func addArrangedSubviews(_ arrangedSubviews: [UIView]) {
+    func addArrangedSubviews(_ arrangedSubviews: [View]) {
         arrangedSubviews.forEach { addArrangedSubview($0) }
     }
     
     @inline(__always)
-    func addArrangedSubviews(_ arrangedSubviews: UIView...) {
+    func addArrangedSubviews(_ arrangedSubviews: View...) {
         arrangedSubviews.forEach { addArrangedSubview($0) }
     }
 }
