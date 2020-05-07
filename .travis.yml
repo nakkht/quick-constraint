@@ -28,9 +28,9 @@ jobs:
       osx_image: xcode10.2
       script:
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=9.0' clean build
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 6 Pro,OS=10.3' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 6 Plus,OS=10.3.1' clean build
 
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=Apple TV,OS=9.0' clean build
-        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=Apple TV,OS=10.3' clean build
+        - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=tvOS Simulator,name=Apple TV,OS=10.2' clean build
 
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=OS X,arch=x86_64' clean build
