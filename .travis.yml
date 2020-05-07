@@ -1,4 +1,3 @@
-os: osx
 language: swift
 
 env:
@@ -14,6 +13,7 @@ branches:
 jobs:
   include:
     - name: Build xcode 11.4
+      os: osx
       osx_image: xcode11.4
       script:
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=12.4' clean build
@@ -25,6 +25,7 @@ jobs:
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=OS X,arch=x86_64' clean build
 
     - name: Build xcode 10.2
+      os: osx
       osx_image: xcode10.2
       script:
         - xcodebuild -project QuickConstraint.xcodeproj -scheme QuickConstraint -destination 'platform=iOS Simulator,name=iPhone 5s,OS=9.0' clean build

@@ -1,0 +1,117 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Anchor.swift",
+      "line": 19,
+      "symbol": "Anchor.all",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Anchor.swift",
+      "line": 20,
+      "symbol": "Anchor.top",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Anchor.swift",
+      "line": 21,
+      "symbol": "Anchor.bottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Anchor.swift",
+      "line": 22,
+      "symbol": "Anchor.leading",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Anchor.swift",
+      "line": 23,
+      "symbol": "Anchor.trailing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Anchor.swift",
+      "line": 24,
+      "symbol": "Anchor.vertical",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Anchor.swift",
+      "line": 25,
+      "symbol": "Anchor.horizontal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Axis.swift",
+      "line": 19,
+      "symbol": "Axis.x",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Axis.swift",
+      "line": 20,
+      "symbol": "Axis.y",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Axis.swift",
+      "line": 21,
+      "symbol": "Axis.all",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Dimension.swift",
+      "line": 19,
+      "symbol": "Dimension.width",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Dimension.swift",
+      "line": 20,
+      "symbol": "Dimension.height",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Dimension.swift",
+      "line": 21,
+      "symbol": "Dimension.all",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/UIStackView.swift",
+      "line": 25,
+      "symbol": "StackView.init(axis:alignment:distribution:spacing:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/UIStackView.swift",
+      "line": 39,
+      "symbol": "StackView.addArrangedSubviews(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/UIStackView.swift",
+      "line": 44,
+      "symbol": "StackView.addArrangedSubviews(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/nakkht/dev/quick-constraint"
+}

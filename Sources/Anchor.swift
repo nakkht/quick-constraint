@@ -16,7 +16,13 @@
 
 /// Enum providing definitions of anchors, including combinations
 public enum Anchor {
-    case all, top, bottom, leading, trailing, vertical, horizontal
+    case all
+    case top
+    case bottom
+    case leading
+    case trailing
+    case vertical
+    case horizontal
     
     /// Determines whether or not enum instance involves top anchor
     var isTop: Bool {

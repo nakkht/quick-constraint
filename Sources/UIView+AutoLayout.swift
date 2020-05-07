@@ -16,12 +16,8 @@
 
 #if os(iOS) || os(tvOS)
 import UIKit
-
-public typealias View = UIView
 #else
 import AppKit
-
-public typealias View = NSView
 #endif
 
 /// Provides convienience methods for using auto layout and constraining view to the parent

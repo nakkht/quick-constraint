@@ -16,7 +16,9 @@
 
 /// Enum providing definitions of dimension options
 public enum Dimension {
-    case width, height, all
+    case width
+    case height
+    case all
     
     /// Determines whether or not enum instance involves width dimentsion
     var isWidth: Bool {

@@ -16,16 +16,8 @@
 
 #if os(iOS) || os(tvOS)
 import UIKit
-
-public typealias Alignment = UIStackView.Alignment
-public typealias StackView = UIStackView
-public typealias StackAxis = NSLayoutConstraint.Axis
 #else
 import AppKit
-
-public typealias Alignment = NSLayoutConstraint.Attribute
-public typealias StackView = NSStackView
-public typealias StackAxis = NSUserInterfaceLayoutOrientation
 #endif
 
 public extension StackView {

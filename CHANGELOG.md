@@ -2,13 +2,14 @@
 
 All notable changes to QuickConstraint project.
 
-## v0.2.0 - [2020-xx-xx]
+## v0.2.0 - [2020-05-08]
 
 Added:
 * Carthage support
 * tvOS support
 * API documentation
 * macOS support
+* Added documentation
 
 ## v0.1.0 - [2020-04-22]
 
