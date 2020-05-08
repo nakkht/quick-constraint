@@ -9,7 +9,7 @@ Added:
 * tvOS support
 * API documentation
 * macOS support
-* Added documentation
+* Added documentation files
 
 ## v0.1.0 - [2020-04-22]
 
