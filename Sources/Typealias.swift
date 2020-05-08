@@ -18,9 +18,13 @@
 
 import UIKit
 
+/// :nodoc:
 public typealias Alignment = UIStackView.Alignment
+/// :nodoc:
 public typealias StackView = UIStackView
+/// :nodoc:
 public typealias StackAxis = NSLayoutConstraint.Axis
+/// :nodoc:
 public typealias View = UIView
 #else
 

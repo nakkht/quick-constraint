@@ -92,24 +92,66 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/nakkht/dev/quick-constraint/Sources/UIStackView.swift",
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/StackView.swift",
       "line": 25,
       "symbol": "StackView.init(axis:alignment:distribution:spacing:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/nakkht/dev/quick-constraint/Sources/UIStackView.swift",
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/StackView.swift",
       "line": 39,
       "symbol": "StackView.addArrangedSubviews(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/nakkht/dev/quick-constraint/Sources/UIStackView.swift",
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/StackView.swift",
       "line": 44,
       "symbol": "StackView.addArrangedSubviews(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Typealias.swift",
+      "line": 23,
+      "symbol": "StackView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Typealias.swift",
+      "line": 24,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Typealias.swift",
+      "line": 33,
+      "symbol": "Alignment",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Typealias.swift",
+      "line": 34,
+      "symbol": "StackView",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Typealias.swift",
+      "line": 35,
+      "symbol": "StackAxis",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nakkht/dev/quick-constraint/Sources/Typealias.swift",
+      "line": 36,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     }
   ],
