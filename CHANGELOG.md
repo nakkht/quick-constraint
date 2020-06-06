@@ -2,6 +2,12 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.2.1 - [2020-06-06]
+
+Fixed:
+* Generating documentation
+* Supported platforms in podspec file
+
 ## v0.2.0 - [2020-05-08]
 
 Added:
