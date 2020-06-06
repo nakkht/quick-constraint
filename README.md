@@ -1,6 +1,7 @@
 # QuickConstraint
 
 [![Build Status](https://travis-ci.com/nakkht/quick-constraint.svg?branch=develop)](https://travis-ci.com/nakkht/quick-constraint)
+![Platforms](https://img.shields.io/badge/platforms-ios%20%7C%20osx%20%7C%20tvos-g)
 
 Extension functions for making layout programmatically easier and faster
 
