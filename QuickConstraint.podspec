@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name = "QuickConstraint"
-  spec.version = "0.2.1"
+  spec.version = "0.3.0"
   spec.summary = "Short and fast auto layout done programmatically."
   spec.description  = <<-DESC
   Short and simple. Lay the views programmatically in more concise way.
