@@ -23,11 +23,11 @@ import AppKit
 /// Provides convienience methods for using auto layout and constraining view to the parent
 public extension View {
     
-    /// The most basic and common constraints dedicated for constraining to all 4 anchors of the parent veiw: top, bottom. leading, trailing
+    /// Creates the most basic and common constraints dedicated for constraining to 4 anchors of the parent veiw: top -> top, bottom -> bottom. leading -> leading, trailing -> trailing
     /// - Parameters:
     ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
     ///   - anchor: anchor type to be used for determining which constraints to generate. Defaults to `all` and generates constaints to all 4 sides,`
-    ///   - margin: number of points to be used for generating margin for the view. Same value applied to all generated constraints
+    ///   - margin: number  to be used as a constant for generated constraints. Same value applied to all generated constraints if there are multiple
     /// - Returns: generated  active constraints
     @inline(__always)
     @discardableResult
@@ -41,6 +41,18 @@ public extension View {
         #else
         return pin(toGuide: view, anchor: anchor, margin: margin)
         #endif
+    }
+    
+    /// Convenience function for creating constraints while utilizing Margin enum
+    /// - Parameters:
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
+    ///   - anchor: anchor type to be used for determining which constraints to generate. Defaults to `all` and generates constaints to all 4 sides,`
+    ///   - margin: number  to be used as a constant for generated constraints. Same value applied to all generated constraints if there are multiple. Will automatically handle conversion to CGFloat
+    /// - Returns: generated  active constraints
+    @inline(__always)
+    @discardableResult
+    func pin(to view: View, anchor: Anchor = .all, margin: Margin = .int(0)) -> [NSLayoutConstraint] {
+        return self.pin(to: view, anchor: anchor, margin: margin.value)
     }
     
     /// Creates opposite constraints: source top anchor to bottom anchor of the target view
