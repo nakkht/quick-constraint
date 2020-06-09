@@ -4,6 +4,9 @@ All notable changes to QuickConstraint project.
 
 ## v0.3.0 - [2020-xx-xx]
 
+Added:
+* Margin enum for encapsulating primitive conversion to CGFloat
+
 ## v0.2.1 - [2020-06-06]
 
 Fixed:
