@@ -14,7 +14,11 @@
 // limitations under the License.
 //  
 
+#if os(iOS) || os(tvOS)
+import UIKit
+#else
 import Foundation
+#endif
 
 public enum Margin {
     case int(Int)
