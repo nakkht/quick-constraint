@@ -26,33 +26,21 @@ public enum Anchor {
     
     /// Determines whether or not enum instance involves top anchor
     var isTop: Bool {
-        switch self {
-        case .top, .all, .vertical: return true
-        default: return false
-        }
+        return self == .top || self == .all || self == .vertical
     }
     
     /// Determines whether or not enum instance involves bottom anchor
     var isBottom: Bool {
-        switch self {
-        case .bottom, .all, .vertical: return true
-        default: return false
-        }
+        return self == .bottom || self == .all || self == .vertical
     }
     
     /// Determines whether or not enum instance involves leading anchor
     var isLeading: Bool {
-        switch self {
-        case .leading, .all, .horizontal: return true
-        default: return false
-        }
+        return self == .leading || self == .all || self == .horizontal
     }
     
     /// Determines whether or not enum instance involves trailing anchor
     var isTrailing: Bool {
-        switch self {
-        case .trailing, .all, .horizontal: return true
-        default: return false
-        }
+        return self == .trailing || self == .all || self == .horizontal
     }
 }

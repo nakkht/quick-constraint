@@ -23,7 +23,8 @@ import AppKit
 /// Provides convienience methods for using auto layout and constraining view to the parent
 public extension View {
     
-    /// Creates the most basic and common constraints dedicated for constraining to 4 anchors of the parent veiw: top -> top, bottom -> bottom. leading -> leading, trailing -> trailing
+    /// Creates the most basic  constraints dedicated for constraining to 4 anchors of the parent veiw: top -> top, bottom -> bottom. leading -> leading, trailing -> trailing.
+    /// Will attemp to use `safeAreaLayoutGuide` if possible
     /// - Parameters:
     ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
     ///   - anchor: anchor type to be used for determining which constraints to generate. Defaults to `all` and generates constaints to all 4 sides,`
@@ -31,15 +32,15 @@ public extension View {
     /// - Returns: generated  active constraints
     @inline(__always)
     @discardableResult
-    func pin(to view: View, anchor: Anchor = .all, margin: CGFloat = 0) -> [NSLayoutConstraint] {
+    func pin(toSafeArea view: View, anchor: Anchor = .all, margin: Margin = .int(0)) -> [Anchor: NSLayoutConstraint] {
         #if os(iOS) || os(tvOS)
         if #available(iOS 11.0, tvOS 11.0, *) {
-            return pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin)
+            return pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin.value)
         } else {
-            return pin(toGuide: view, anchor: anchor, margin: margin)
+            return pin(toGuide: view, anchor: anchor, margin: margin.value)
         }
         #else
-        return pin(toGuide: view, anchor: anchor, margin: margin)
+        return pin(toGuide: view, anchor: anchor, margin: margin.value)
         #endif
     }
     
@@ -51,8 +52,8 @@ public extension View {
     /// - Returns: generated  active constraints
     @inline(__always)
     @discardableResult
-    func pin(to view: View, anchor: Anchor = .all, margin: Margin = .int(0)) -> [NSLayoutConstraint] {
-        return self.pin(to: view, anchor: anchor, margin: margin.value)
+    func pin(to view: View, anchor: Anchor = .all, margin: Margin = .int(0)) -> [Anchor: NSLayoutConstraint] {
+        return pin(toGuide: view, anchor: anchor, margin: margin.value)
     }
     
     /// Creates opposite constraints: source top anchor to bottom anchor of the target view
@@ -62,9 +63,9 @@ public extension View {
     /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
-    func pinTopToBottom(of view: View, margin: CGFloat = 0) -> NSLayoutConstraint {
+    func pinTopToBottom(of view: View, margin: Margin = .int(0)) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let constraint = topAnchor.constraint(equalTo: view.bottomAnchor, constant: margin)
+        let constraint = topAnchor.constraint(equalTo: view.bottomAnchor, constant: margin.value)
         constraint.isActive = true
         return constraint
     }
@@ -76,9 +77,9 @@ public extension View {
     /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
-    func pinBottomToTop(of view: View, margin: CGFloat = 0) -> NSLayoutConstraint {
+    func pinBottomToTop(of view: View, margin: Margin = .int(0)) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let constraint = bottomAnchor.constraint(equalTo: view.topAnchor, constant: -margin)
+        let constraint = bottomAnchor.constraint(equalTo: view.topAnchor, constant: -margin.value)
         constraint.isActive = true
         return constraint
     }
@@ -90,9 +91,9 @@ public extension View {
     /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
-    func pinLeadingToTrailing(of view: View, margin: CGFloat = 0) -> NSLayoutConstraint {
+    func pinLeadingToTrailing(of view: View, margin: Margin = .int(0)) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let constraint = leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: margin)
+        let constraint = leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: margin.value)
         constraint.isActive = true
         return constraint
     }
@@ -104,21 +105,114 @@ public extension View {
     /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
-    func pinTrailingToLeading(of view: View, margin: CGFloat = 0) -> NSLayoutConstraint {
+    func pinTrailingToLeading(of view: View, margin: Margin = .int(0)) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let constraint = trailingAnchor.constraint(equalTo: view.leadingAnchor, constant: -margin)
+        let constraint = trailingAnchor.constraint(equalTo: view.leadingAnchor, constant: -margin.value)
         constraint.isActive = true
         return constraint
     }
     
-    private func pin(toGuide guide: AnyObject, anchor: Anchor = .all, margin: CGFloat) -> [NSLayoutConstraint] {
+    @inline(__always)
+    @discardableResult
+    func pinToTopLeading(of view: View, margin: Margin = .int(0)) -> [Anchor: NSLayoutConstraint] {
+        return pin(toGuide: view, anchors: [.top, .leading], margin: margin.value)
+    }
+    
+    @inline(__always)
+    @discardableResult
+    func pinToTopLeading(ofSafeArea view: View, margin: Margin = .int(0)) -> [Anchor: NSLayoutConstraint] {
+        #if os(iOS) || os(tvOS)
+        if #available(iOS 11.0, tvOS 11.0, *) {
+            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.top, .leading], margin: margin.value)
+        } else {
+            return pin(toGuide: view, anchors: [.top, .leading], margin: margin.value)
+        }
+        #else
+        return pin(toGuide: view, anchors: [.top, .leading], margin: margin.value)
+        #endif
+    }
+    
+    @inline(__always)
+    @discardableResult
+    func pinToTopTrailing(of view: View, margin: Margin = .int(0)) -> [Anchor: NSLayoutConstraint] {
+        return pin(toGuide: view, anchors: [.top, .trailing], margin: margin.value)
+    }
+    
+    @inline(__always)
+    @discardableResult
+    func pinToTopTrailing(ofSafeArea view: View, margin: Margin = .int(0)) -> [Anchor: NSLayoutConstraint] {
+        #if os(iOS) || os(tvOS)
+        if #available(iOS 11.0, tvOS 11.0, *) {
+            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.top, .trailing], margin: margin.value)
+        } else {
+            return pin(toGuide: view, anchors: [.top, .trailing], margin: margin.value)
+        }
+        #else
+        return pin(toGuide: view, anchors: [.top, .trailing], margin: margin.value)
+        #endif
+    }
+    
+    @inline(__always)
+    @discardableResult
+    func pinToBottomLeading(of view: View, margin: Margin = .int(0)) -> [Anchor: NSLayoutConstraint] {
+        return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin.value)
+    }
+    
+    @inline(__always)
+    @discardableResult
+    func pinToBottomLeading(ofSafeArea view: View, margin: Margin = .int(0)) -> [Anchor: NSLayoutConstraint] {
+        #if os(iOS) || os(tvOS)
+        if #available(iOS 11.0, tvOS 11.0, *) {
+            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.bottom, .leading], margin: margin.value)
+        } else {
+            return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin.value)
+        }
+        #else
+        return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin.value)
+        #endif
+    }
+    
+    @inline(__always)
+    @discardableResult
+    func pinToBottomTrailing(of view: View, margin: Margin = .int(0)) -> [Anchor: NSLayoutConstraint] {
+        return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin.value)
+    }
+    
+    @inline(__always)
+    @discardableResult
+    func pinToBottomTrailing(ofSafeArea view: View, margin: Margin = .int(0)) -> [Anchor: NSLayoutConstraint] {
+        #if os(iOS) || os(tvOS)
+        if #available(iOS 11.0, tvOS 11.0, *) {
+            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.bottom, .trailing], margin: margin.value)
+        } else {
+            return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin.value)
+        }
+        #else
+        return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin.value)
+        #endif
+    }
+    
+    private func pin(toGuide guide: AnyObject, anchors: [Anchor], margin: CGFloat = 0) -> [Anchor: NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
-        var constraints = [NSLayoutConstraint]()
-        if anchor.isTop { constraints.append(topAnchor.constraint(equalTo: guide.topAnchor, constant: margin)) }
-        if anchor.isBottom { constraints.append(bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -margin)) }
-        if anchor.isLeading { constraints.append(leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: margin)) }
-        if anchor.isTrailing { constraints.append(trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -margin)) }
-        NSLayoutConstraint.activate(constraints)
+        var constraints = [Anchor: NSLayoutConstraint]()
+        anchors.forEach {
+            if $0.isTop { constraints[.top] = bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -margin) }
+            if $0.isBottom { constraints[.bottom] = bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -margin) }
+            if $0.isLeading { constraints[.leading] = leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: margin) }
+            if $0.isTrailing { constraints[.trailing] = trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -margin) }
+        }
+        NSLayoutConstraint.activate(Array(constraints.values))
+        return constraints
+    }
+    
+    private func pin(toGuide guide: AnyObject, anchor: Anchor = .all, margin: CGFloat) -> [Anchor: NSLayoutConstraint] {
+        translatesAutoresizingMaskIntoConstraints = false
+        var constraints = [Anchor: NSLayoutConstraint]()
+        if anchor.isTop { constraints[.top] = topAnchor.constraint(equalTo: guide.topAnchor, constant: margin) }
+        if anchor.isBottom { constraints[.bottom] = bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -margin) }
+        if anchor.isLeading { constraints[.leading] = leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: margin) }
+        if anchor.isTrailing { constraints[.trailing] = trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -margin) }
+        NSLayoutConstraint.activate(Array(constraints.values))
         return constraints
     }
     

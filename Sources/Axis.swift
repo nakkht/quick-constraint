@@ -22,17 +22,11 @@ public enum Axis {
     
     /// Determines whether or not enum instance involves horizontal//x axis
     var isX: Bool {
-        switch self {
-        case .x, .all: return true
-        default: return false
-        }
+        return self == .x || self == .all
     }
     
     /// Determines whether or not enum instance involves vertical//y axis
     var isY: Bool {
-        switch self {
-        case .y, .all: return true
-        default: return false
-        }
+        return self == .y || self == .all
     }
 }
