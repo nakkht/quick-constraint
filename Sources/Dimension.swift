@@ -22,17 +22,11 @@ public enum Dimension {
     
     /// Determines whether or not enum instance involves width dimentsion
     var isWidth: Bool {
-        switch self {
-        case .width, .all: return true
-        default: return false
-        }
+        return self == .width || self == .all
     }
     
     /// Determines whether or not enum instance involves height dimentsion
     var isHeight: Bool {
-        switch self {
-        case .height, .all: return true
-        default: return false
-        }
+        return self == .height || self == .all
     }
 }
