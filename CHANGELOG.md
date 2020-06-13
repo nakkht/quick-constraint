@@ -2,6 +2,11 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.3.1 - [2020-06-13]
+
+Fixed:
+* Access modifiers for activated/deactivated properties not accessible outside of framework
+
 ## v0.3.0 - [2020-06-13]
 
 Added:

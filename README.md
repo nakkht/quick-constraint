@@ -9,7 +9,7 @@ Extension functions for making layout programmatically easier and faster
 ## Author
 * [Paulius Gudonis](https://pgu.dev)
 
-## Licence
+## License
 This repository is under the **Apache v2.0** license. [Find it here](https://github.com/nakkht/quick-constraint/blob/master/LICENSE).
 
     Copyright 2020 Paulius Gudonis
