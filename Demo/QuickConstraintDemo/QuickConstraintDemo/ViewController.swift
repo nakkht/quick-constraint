@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     lazy var centerBox: UIView = {
         let view = UIView()
         view.backgroundColor = .white
-        view.set(.all, 60)
+        view.set(.size, 100)
         return view
     }()
     
@@ -36,9 +36,9 @@ class ViewController: UIViewController {
         super.loadView()
         self.view.backgroundColor = .white
         self.view.addSubview(topBox)
-        topBox.pin(to: view, margin: 40)
+        topBox.pin(toSafeArea: view)
         
         topBox.addSubview(centerBox)
-        centerBox.center(to: topBox, axis: .all)
+        centerBox.center(to: topBox)
     }
 }
