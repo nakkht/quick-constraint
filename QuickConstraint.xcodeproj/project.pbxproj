@@ -14,6 +14,7 @@
 		767435002465DF7700227A56 /* View+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767434FE2465DF7700227A56 /* View+AutoLayout.swift */; };
 		767435012465DF7700227A56 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767434FF2465DF7700227A56 /* StackView.swift */; };
 		768B64FF2490346600DE4663 /* Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768B64FE2490346600DE4663 /* Margin.swift */; };
+		76DFF6472495045D009AD4E9 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFF6462495045D009AD4E9 /* LayoutConstraint.swift */; };
 		OBJ_31 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		767434FE2465DF7700227A56 /* View+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+AutoLayout.swift"; sourceTree = "<group>"; };
 		767434FF2465DF7700227A56 /* StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		768B64FE2490346600DE4663 /* Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margin.swift; sourceTree = "<group>"; };
+		76DFF6462495045D009AD4E9 /* LayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		"QuickConstraint::QuickConstraint::Product" /* QuickConstraint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QuickConstraint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,6 +52,7 @@
 				765A81A5244CFEAF00AA8E73 /* Dimension.swift */,
 				767434FA246583D400227A56 /* Typealias.swift */,
 				768B64FE2490346600DE4663 /* Margin.swift */,
+				76DFF6462495045D009AD4E9 /* LayoutConstraint.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				767434FB246583D400227A56 /* Typealias.swift in Sources */,
 				765A81AC244CFEAF00AA8E73 /* Axis.swift in Sources */,
 				765A81AA244CFEAF00AA8E73 /* Dimension.swift in Sources */,
+				76DFF6472495045D009AD4E9 /* LayoutConstraint.swift in Sources */,
 				768B64FF2490346600DE4663 /* Margin.swift in Sources */,
 				767435002465DF7700227A56 /* View+AutoLayout.swift in Sources */,
 				767435012465DF7700227A56 /* StackView.swift in Sources */,
