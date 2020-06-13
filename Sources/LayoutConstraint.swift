@@ -27,13 +27,13 @@ public typealias LayoutConstraint = NSLayoutConstraint
 extension LayoutConstraint {
     
     /// Sets `isActive` property to true and returns the constraint
-    var activated: LayoutConstraint {
+    open var activated: LayoutConstraint {
         self.isActive = true
         return self
     }
     
     /// Sets `isActive` property to false and returns the constraint
-    var deactivated: LayoutConstraint {
+    open var deactivated: LayoutConstraint {
         self.isActive = false
         return self
     }
