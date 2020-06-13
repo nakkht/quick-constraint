@@ -11,16 +11,13 @@ import QuickConstraint
 
 class ViewController: UIViewController {
     
+    var boxHeight: LayoutConstraint?
+    var boxConstraints: [Anchor: LayoutConstraint]!
+    
     lazy var topBox: UIView = {
         let view = UIView()
         view.backgroundColor = .brown
-        return view
-    }()
-    
-    lazy var centerBox: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.set(.size, 100)
+        boxHeight = view.set(.height, 60).first
         return view
     }()
     
@@ -36,9 +33,16 @@ class ViewController: UIViewController {
         super.loadView()
         self.view.backgroundColor = .white
         self.view.addSubview(topBox)
-        topBox.pin(toSafeArea: view)
-        
-        topBox.addSubview(centerBox)
-        centerBox.center(to: topBox)
+        boxConstraints = topBox.pin(toSafeArea: view)
+        let _ = boxConstraints[.bottom]?.deactivated
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 3.0, delay: 0.0, options: [.autoreverse, .repeat], animations: {
+             let _ = self.boxHeight?.deactivated
+                       let _ = self.boxConstraints[.bottom]?.activated
+                       self.view.layoutIfNeeded()
+        })
     }
 }
