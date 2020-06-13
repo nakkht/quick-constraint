@@ -14,7 +14,7 @@
     <a title="View Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">QuickConstraint 0.2.0 Docs</a> (45% documented)</p>
+        <p><a href="../index.html">QuickConstraint 0.2.0 Docs</a> (64% documented)</p>
         <p class="header-right"><a href="https://github.com/nakkht/quick-constraint"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -40,11 +40,17 @@
               <li class="nav-group-task">
                 <a href="../Enums/Dimension.html">Dimension</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Margin.html">Margin</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/LayoutConstraint.html">LayoutConstraint</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Extensions/StackView.html">StackView</a>
               </li>
@@ -58,6 +64,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:15QuickConstraint9Alignmenta">Alignment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:15QuickConstraint9StackAxisa">StackAxis</a>
@@ -82,7 +91,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Provides convienience methods for using auto layout and constraining view to the parent</p>
 
           </section>
           <section class="section task-group-section">
@@ -91,9 +100,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6NSViewC15QuickConstraintE3pin2to6anchor6marginSaySo08NSLayoutC0CGAB_AC6AnchorO12CoreGraphics7CGFloatVtF"></a>
-                    <a name="//apple_ref/swift/Method/pin(to:anchor:margin:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE3pin2to6anchor6marginSaySo08NSLayoutC0CGAB_AC6AnchorO12CoreGraphics7CGFloatVtF">pin(to:<wbr>anchor:<wbr>margin:<wbr>)</a>
+                    <a name="/s:So6NSViewC15QuickConstraintE3pin10toSafeArea6anchor6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AjC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pin(toSafeArea:anchor:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE3pin10toSafeArea6anchor6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AjC6MarginOSbtF">pin(toSafeArea:<wbr>anchor:<wbr>margin:<wbr>isActive:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -101,7 +110,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The most basic and common constraints dedicated for constraining to all 4 anchors of the parent veiw: top, bottom. leading, trailing</p>
+                        <p>Creates the most basic  constraints dedicated for constraining to 4 anchors of the parent veiw: top -&gt; top, bottom -&gt; bottom. leading -&gt; leading, trailing -&gt; trailing.
+Will attemp to use <code>safeAreaLayoutGuide</code> if possible</p>
 
                       </div>
                       <div class="declaration">
@@ -110,7 +120,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
-<span class="kd">func</span> <span class="nf">pin</span><span class="p">(</span><span class="n">to</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">all</span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSLayoutConstraint</span><span class="p">]</span></code></pre>
+<span class="kd">func</span> <span class="nf">pin</span><span class="p">(</span><span class="n">toSafeArea</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">all</span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -150,7 +160,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>number of points to be used for generating margin for the view. Same value applied to all generated constraints</p>
+                                  <p>number  to be used as a constant for generated constraints. Same value applied to all generated constraints if there are multiple</p>
                                 </div>
                               </td>
                             </tr>
@@ -167,9 +177,85 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6NSViewC15QuickConstraintE14pinTopToBottom2of6marginSo08NSLayoutC0CAB_12CoreGraphics7CGFloatVtF"></a>
-                    <a name="//apple_ref/swift/Method/pinTopToBottom(of:margin:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE14pinTopToBottom2of6marginSo08NSLayoutC0CAB_12CoreGraphics7CGFloatVtF">pinTopToBottom(of:<wbr>margin:<wbr>)</a>
+                    <a name="/s:So6NSViewC15QuickConstraintE3pin2to6anchor6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AjC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pin(to:anchor:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE3pin2to6anchor6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AjC6MarginOSbtF">pin(to:<wbr>anchor:<wbr>margin:<wbr>isActive:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience function for creating constraints while utilizing Margin enum</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">pin</span><span class="p">(</span><span class="n">to</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">all</span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>view</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>anchor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>anchor type to be used for determining which constraints to generate. Defaults to <code>all</code> and generates constaints to all 4 sides,`</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>margin</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>number  to be used as a constant for generated constraints. Same value applied to all generated constraints if there are multiple. Will automatically handle conversion to CGFloat</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>generated  active constraints</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6NSViewC15QuickConstraintE14pinTopToBottom2of6margin8isActiveSo08NSLayoutC0CAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinTopToBottom(of:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE14pinTopToBottom2of6margin8isActiveSo08NSLayoutC0CAB_AC6MarginOSbtF">pinTopToBottom(of:<wbr>margin:<wbr>isActive:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -186,7 +272,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
-<span class="kd">func</span> <span class="nf">pinTopToBottom</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+<span class="kd">func</span> <span class="nf">pinTopToBottom</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span></code></pre>
 
                         </div>
                       </div>
@@ -231,9 +317,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6NSViewC15QuickConstraintE14pinBottomToTop2of6marginSo08NSLayoutC0CAB_12CoreGraphics7CGFloatVtF"></a>
-                    <a name="//apple_ref/swift/Method/pinBottomToTop(of:margin:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE14pinBottomToTop2of6marginSo08NSLayoutC0CAB_12CoreGraphics7CGFloatVtF">pinBottomToTop(of:<wbr>margin:<wbr>)</a>
+                    <a name="/s:So6NSViewC15QuickConstraintE14pinBottomToTop2of6margin8isActiveSo08NSLayoutC0CAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinBottomToTop(of:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE14pinBottomToTop2of6margin8isActiveSo08NSLayoutC0CAB_AC6MarginOSbtF">pinBottomToTop(of:<wbr>margin:<wbr>isActive:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -250,7 +336,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
-<span class="kd">func</span> <span class="nf">pinBottomToTop</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+<span class="kd">func</span> <span class="nf">pinBottomToTop</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span></code></pre>
 
                         </div>
                       </div>
@@ -295,9 +381,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6NSViewC15QuickConstraintE20pinLeadingToTrailing2of6marginSo08NSLayoutC0CAB_12CoreGraphics7CGFloatVtF"></a>
-                    <a name="//apple_ref/swift/Method/pinLeadingToTrailing(of:margin:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE20pinLeadingToTrailing2of6marginSo08NSLayoutC0CAB_12CoreGraphics7CGFloatVtF">pinLeadingToTrailing(of:<wbr>margin:<wbr>)</a>
+                    <a name="/s:So6NSViewC15QuickConstraintE20pinLeadingToTrailing2of6margin8isActiveSo08NSLayoutC0CAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinLeadingToTrailing(of:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE20pinLeadingToTrailing2of6margin8isActiveSo08NSLayoutC0CAB_AC6MarginOSbtF">pinLeadingToTrailing(of:<wbr>margin:<wbr>isActive:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -314,7 +400,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
-<span class="kd">func</span> <span class="nf">pinLeadingToTrailing</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+<span class="kd">func</span> <span class="nf">pinLeadingToTrailing</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span></code></pre>
 
                         </div>
                       </div>
@@ -359,9 +445,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6NSViewC15QuickConstraintE20pinTrailingToLeading2of6marginSo08NSLayoutC0CAB_12CoreGraphics7CGFloatVtF"></a>
-                    <a name="//apple_ref/swift/Method/pinTrailingToLeading(of:margin:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE20pinTrailingToLeading2of6marginSo08NSLayoutC0CAB_12CoreGraphics7CGFloatVtF">pinTrailingToLeading(of:<wbr>margin:<wbr>)</a>
+                    <a name="/s:So6NSViewC15QuickConstraintE20pinTrailingToLeading2of6margin8isActiveSo08NSLayoutC0CAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinTrailingToLeading(of:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE20pinTrailingToLeading2of6margin8isActiveSo08NSLayoutC0CAB_AC6MarginOSbtF">pinTrailingToLeading(of:<wbr>margin:<wbr>isActive:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -378,7 +464,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
-<span class="kd">func</span> <span class="nf">pinTrailingToLeading</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+<span class="kd">func</span> <span class="nf">pinTrailingToLeading</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span></code></pre>
 
                         </div>
                       </div>
@@ -416,6 +502,238 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>generated active constraints</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6NSViewC15QuickConstraintE15pinToTopLeading2of6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinToTopLeading(of:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE15pinToTopLeading2of6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF">pinToTopLeading(of:<wbr>margin:<wbr>isActive:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">pinToTopLeading</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6NSViewC15QuickConstraintE15pinToTopLeading10ofSafeArea6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinToTopLeading(ofSafeArea:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE15pinToTopLeading10ofSafeArea6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF">pinToTopLeading(ofSafeArea:<wbr>margin:<wbr>isActive:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">pinToTopLeading</span><span class="p">(</span><span class="n">ofSafeArea</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6NSViewC15QuickConstraintE16pinToTopTrailing2of6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinToTopTrailing(of:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE16pinToTopTrailing2of6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF">pinToTopTrailing(of:<wbr>margin:<wbr>isActive:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">pinToTopTrailing</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6NSViewC15QuickConstraintE16pinToTopTrailing10ofSafeArea6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinToTopTrailing(ofSafeArea:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE16pinToTopTrailing10ofSafeArea6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF">pinToTopTrailing(ofSafeArea:<wbr>margin:<wbr>isActive:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">pinToTopTrailing</span><span class="p">(</span><span class="n">ofSafeArea</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6NSViewC15QuickConstraintE18pinToBottomLeading2of6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinToBottomLeading(of:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE18pinToBottomLeading2of6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF">pinToBottomLeading(of:<wbr>margin:<wbr>isActive:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">pinToBottomLeading</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6NSViewC15QuickConstraintE18pinToBottomLeading10ofSafeArea6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinToBottomLeading(ofSafeArea:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE18pinToBottomLeading10ofSafeArea6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF">pinToBottomLeading(ofSafeArea:<wbr>margin:<wbr>isActive:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">pinToBottomLeading</span><span class="p">(</span><span class="n">ofSafeArea</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6NSViewC15QuickConstraintE19pinToBottomTrailing2of6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinToBottomTrailing(of:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE19pinToBottomTrailing2of6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF">pinToBottomTrailing(of:<wbr>margin:<wbr>isActive:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">pinToBottomTrailing</span><span class="p">(</span><span class="n">of</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6NSViewC15QuickConstraintE19pinToBottomTrailing10ofSafeArea6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF"></a>
+                    <a name="//apple_ref/swift/Method/pinToBottomTrailing(ofSafeArea:margin:isActive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE19pinToBottomTrailing10ofSafeArea6margin8isActiveSDyAC6AnchorOSo08NSLayoutC0CGAB_AC6MarginOSbtF">pinToBottomTrailing(ofSafeArea:<wbr>margin:<wbr>isActive:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">pinToBottomTrailing</span><span class="p">(</span><span class="n">ofSafeArea</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt"><a href="../Enums/Margin.html">Margin</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Anchor.html">Anchor</a></span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -442,7 +760,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
-<span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="n">_</span> <span class="nv">dimension</span><span class="p">:</span> <span class="kt"><a href="../Enums/Dimension.html">Dimension</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSLayoutConstraint</span><span class="p">]</span></code></pre>
+<span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="n">_</span> <span class="nv">dimension</span><span class="p">:</span> <span class="kt"><a href="../Enums/Dimension.html">Dimension</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -487,9 +805,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6NSViewC15QuickConstraintE6center2to4axisSaySo08NSLayoutC0CGAB_AC4AxisOtF"></a>
+                    <a name="/s:So6NSViewC15QuickConstraintE6center2to4axisSaySo08NSLayoutC0CGAB_AC4AxisOSgtF"></a>
                     <a name="//apple_ref/swift/Method/center(to:axis:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE6center2to4axisSaySo08NSLayoutC0CGAB_AC4AxisOtF">center(to:<wbr>axis:<wbr>)</a>
+                    <a class="token" href="#/s:So6NSViewC15QuickConstraintE6center2to4axisSaySo08NSLayoutC0CGAB_AC4AxisOSgtF">center(to:<wbr>axis:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -506,7 +824,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
-<span class="kd">func</span> <span class="nf">center</span><span class="p">(</span><span class="n">to</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">axis</span><span class="p">:</span> <span class="kt"><a href="../Enums/Axis.html">Axis</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSLayoutConstraint</span><span class="p">]</span></code></pre>
+<span class="kd">func</span> <span class="nf">center</span><span class="p">(</span><span class="n">to</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></span><span class="p">,</span> <span class="nv">axis</span><span class="p">:</span> <span class="kt"><a href="../Enums/Axis.html">Axis</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -553,7 +871,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://pgu.dev" target="_blank" rel="external">Paulius Gudonis</a>. All rights reserved. (Last updated: 2020-05-08)</p>
+          <p>&copy; 2020 <a class="link" href="https://pgu.dev" target="_blank" rel="external">Paulius Gudonis</a>. All rights reserved. (Last updated: 2020-06-13)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

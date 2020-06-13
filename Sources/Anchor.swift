@@ -16,12 +16,26 @@
 
 /// Enum providing definitions of anchors, including combinations
 public enum Anchor {
+    
+    /// Represents all anchors
     case all
+    
+    /// Represents top anchor
     case top
+    
+    /// Represents bottom anchor
     case bottom
+    
+    /// Represents leading anchor
     case leading
+    
+    /// Represents trailing anchor
     case trailing
+    
+    /// Represents top and bottom anchors
     case vertical
+    
+    /// Represents leading and trailing anchors
     case horizontal
     
     /// Determines whether or not enum instance involves top anchor

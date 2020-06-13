@@ -17,18 +17,22 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 #else
-import Foundation
+import AppKit
 #endif
 
+/// Typealias for `NSLayoutConstraint`
 public typealias LayoutConstraint = NSLayoutConstraint
 
+/// Extensions for making operations on `NSLayoutConstraint` less vebose
 extension LayoutConstraint {
     
+    /// Sets `isActive` property to true and returns the constraint
     var activated: LayoutConstraint {
         self.isActive = true
         return self
     }
     
+    /// Sets `isActive` property to false and returns the constraint
     var deactivated: LayoutConstraint {
         self.isActive = false
         return self

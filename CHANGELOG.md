@@ -2,12 +2,14 @@
 
 All notable changes to QuickConstraint project.
 
-## v0.3.0 - [2020-xx-xx]
+## v0.3.0 - [2020-06-13]
 
 Added:
 * Margin enum for encapsulating primitive conversion to CGFloat
 * Ability to pin views to the corners of parent view: top leading/top trailing/bottom leading/bottom trailing
 * Demos folder
+* Added `isActive` parameter for `pin` functions
+* Added `activated` and `deactivated` properties for easier way to activate/deactivate constraints
 
 ## v0.2.1 - [2020-06-06]
 

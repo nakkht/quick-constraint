@@ -30,8 +30,15 @@ public typealias View = UIView
 
 import AppKit
 
+/// Alignment typealias: represents `UIStackView.Alignment` on `UIKit` and `NSLayoutConstraint.Attribute` on `AppKit`
 public typealias Alignment = NSLayoutConstraint.Attribute
+
+/// StackView typealias: represents `UIStackView` on `UIKit` and `NSStackView` on `AppKit`
 public typealias StackView = NSStackView
+
+/// StackAxis typealias: represents `NSLayoutConstraint.Axis` on `UIKit` and `NSUserInterfaceLayoutOrientation` on `AppKit`
 public typealias StackAxis = NSUserInterfaceLayoutOrientation
+
+/// View typealias: represents `UIView` on `UIKit` and `NSView` on `AppKit`
 public typealias View = NSView
 #endif

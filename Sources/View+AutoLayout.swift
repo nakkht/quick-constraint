@@ -239,11 +239,11 @@ public extension View {
     /// - Returns: generated active constraints
     @inline(__always)
     @discardableResult
-    func center(to view: View, axis: Axis) -> [LayoutConstraint] {
+    func center(to view: View, axis: Axis? = nil) -> [LayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
         var constraints = [LayoutConstraint]()
-        if axis.isX { constraints.append(centerXAnchor.constraint(equalTo: view.centerXAnchor)) }
-        if axis.isY { constraints.append(centerYAnchor.constraint(equalTo: view.centerYAnchor)) }
+        if axis?.isX ?? true { constraints.append(centerXAnchor.constraint(equalTo: view.centerXAnchor)) }
+        if axis?.isY ?? true { constraints.append(centerYAnchor.constraint(equalTo: view.centerYAnchor)) }
         LayoutConstraint.activate(constraints)
         return constraints
     }
