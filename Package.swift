@@ -16,5 +16,6 @@ let package = Package(
         .target(name: "QuickConstraint",
                 path: ".",
                 sources: ["Sources"])
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
