@@ -2,6 +2,11 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.4.0 - [2020-06-13]
+
+Changed:
+* activated/deactivated properties to functions with discardable results
+
 ## v0.3.1 - [2020-06-13]
 
 Fixed:
