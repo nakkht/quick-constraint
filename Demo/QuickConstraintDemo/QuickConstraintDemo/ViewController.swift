@@ -34,15 +34,15 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .white
         self.view.addSubview(topBox)
         boxConstraints = topBox.pin(toSafeArea: view)
-        let _ = boxConstraints[.bottom]?.deactivated
+        boxConstraints[.bottom]?.deactivate()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UIView.animate(withDuration: 3.0, delay: 0.0, options: [.autoreverse, .repeat], animations: {
-             let _ = self.boxHeight?.deactivated
-                       let _ = self.boxConstraints[.bottom]?.activated
-                       self.view.layoutIfNeeded()
+            let _ = self.boxHeight?.deactivate()
+            let _ = self.boxConstraints[.bottom]?.activate()
+            self.view.layoutIfNeeded()
         })
     }
 }
