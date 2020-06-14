@@ -2,6 +2,12 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.4.1 - [2020-06-14]
+
+Fixed:
+* `Package.swift` to use version 10.14 for the macOS platform 
+* Incorrect QuickConstraint target version (v0.3.2 -> v0.4.1)
+
 ## v0.4.0 - [2020-06-13]
 
 Changed:

@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     lazy var topBox: UIView = {
         let view = UIView()
         view.backgroundColor = .brown
-        boxHeight = view.set(.height, 60).first
+        boxHeight = view.set(.size, 60).first
         return view
     }()
     
@@ -33,15 +33,14 @@ class ViewController: UIViewController {
         super.loadView()
         self.view.backgroundColor = .white
         self.view.addSubview(topBox)
-        boxConstraints = topBox.pin(toSafeArea: view)
-        boxConstraints[.bottom]?.deactivate()
+        topBox.center(to: view)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animate(withDuration: 3.0, delay: 0.0, options: [.autoreverse, .repeat], animations: {
-            let _ = self.boxHeight?.deactivate()
-            let _ = self.boxConstraints[.bottom]?.activate()
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: [.autoreverse, .repeat, .curveEaseIn], animations: {
+            self.topBox.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+            self.topBox.transform = CGAffineTransform(translationX: 100.0, y: 0)
             self.view.layoutIfNeeded()
         })
     }
