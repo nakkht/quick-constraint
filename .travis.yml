@@ -45,7 +45,7 @@ jobs:
     - osx_image: xcode12
       env: DESTINATION='platform=iOS Simulator,name=iPhone 11,OS=latest'
     - osx_image: xcode12
-      env: DESTINATION='platform=iOS Simulator,name=Apple TV,OS=latest'
+      env: DESTINATION='platform=tvOS Simulator,name=Apple TV,OS=latest'
     - osx_image: xcode12
       env: DESTINATION='platform=OS X,arch=x86_64'
 
