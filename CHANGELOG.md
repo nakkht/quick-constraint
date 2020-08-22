@@ -2,25 +2,41 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.4.2 - [2020-08-22]
+
+Added
+* Xcode 12 builds in CI pipeline
+
+Changed
+* Rearranged Demo project path
+* osx deployment target to 10.14 in podspec
+
+Removed
+* Obsolete targets from the project
+
+Fixed
+* Shown project version in documentation
+
+
 ## v0.4.1 - [2020-06-14]
 
-Fixed:
+Fixed
 * `Package.swift` to use version 10.14 for the macOS platform 
 * Incorrect QuickConstraint target version (v0.3.2 -> v0.4.1)
 
 ## v0.4.0 - [2020-06-13]
 
-Changed:
+Changed
 * activated/deactivated properties to functions with discardable results
 
 ## v0.3.1 - [2020-06-13]
 
-Fixed:
+Fixed
 * Access modifiers for activated/deactivated properties not accessible outside of framework
 
 ## v0.3.0 - [2020-06-13]
 
-Added:
+Added
 * Margin enum for encapsulating primitive conversion to CGFloat
 * Ability to pin views to the corners of parent view: top leading/top trailing/bottom leading/bottom trailing
 * Demos folder
@@ -29,13 +45,13 @@ Added:
 
 ## v0.2.1 - [2020-06-06]
 
-Fixed:
+Fixed
 * Generating documentation
 * Supported platforms in podspec file
 
 ## v0.2.0 - [2020-05-08]
 
-Added:
+Added
 * Carthage support
 * tvOS support
 * API documentation
@@ -44,7 +60,7 @@ Added:
 
 ## v0.1.0 - [2020-04-22]
 
-Added:
+Added
 * Pinning view directly to the parent view
 * Centering view in the parent view
 * Simple sizing constraints
