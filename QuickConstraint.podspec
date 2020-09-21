@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name = "QuickConstraint"
-  spec.version = "0.4.2"
+  spec.version = "0.5.0"
   spec.summary = "Short and fast auto layout done programmatically."
   spec.description  = <<-DESC
   Short and simple. Lay the views programmatically in more concise way.
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.osx.deployment_target = "10.14"
   spec.tvos.deployment_target = "9.0"
   
-  spec.swift_version = "5.2"
+  spec.swift_version = "5.3"
 
   spec.source = { :git => "https://github.com/nakkht/quick-constraint.git", :tag => "v#{spec.version}" }
 

@@ -2,6 +2,14 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.5.0 - [2020-09-21]
+
+Added
+* Swift 5.3 support
+
+Changed
+* Code organization
+
 ## v0.4.2 - [2020-08-22]
 
 Added
