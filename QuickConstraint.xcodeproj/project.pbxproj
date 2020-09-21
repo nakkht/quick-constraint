@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		765A81AA244CFEAF00AA8E73 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A81A5244CFEAF00AA8E73 /* Dimension.swift */; };
-		765A81AB244CFEAF00AA8E73 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A81A6244CFEAF00AA8E73 /* Anchor.swift */; };
-		765A81AC244CFEAF00AA8E73 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A81A7244CFEAF00AA8E73 /* Axis.swift */; };
-		767434FB246583D400227A56 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767434FA246583D400227A56 /* Typealias.swift */; };
-		767435002465DF7700227A56 /* View+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767434FE2465DF7700227A56 /* View+AutoLayout.swift */; };
-		767435012465DF7700227A56 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767434FF2465DF7700227A56 /* StackView.swift */; };
-		768B64FF2490346600DE4663 /* Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768B64FE2490346600DE4663 /* Margin.swift */; };
-		76DFF6472495045D009AD4E9 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFF6462495045D009AD4E9 /* LayoutConstraint.swift */; };
+		76B76F1525188948002061F6 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F0D25188948002061F6 /* Anchor.swift */; };
+		76B76F1625188948002061F6 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F0E25188948002061F6 /* StackView.swift */; };
+		76B76F1725188948002061F6 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F0F25188948002061F6 /* Axis.swift */; };
+		76B76F1825188948002061F6 /* Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F1025188948002061F6 /* Margin.swift */; };
+		76B76F1925188948002061F6 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F1125188948002061F6 /* Dimension.swift */; };
+		76B76F1A25188948002061F6 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F1225188948002061F6 /* Typealias.swift */; };
+		76B76F1B25188948002061F6 /* View+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F1325188948002061F6 /* View+AutoLayout.swift */; };
+		76B76F1C25188948002061F6 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F1425188948002061F6 /* LayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		765A81A5244CFEAF00AA8E73 /* Dimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
-		765A81A6244CFEAF00AA8E73 /* Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
-		765A81A7244CFEAF00AA8E73 /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
-		767434FA246583D400227A56 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
-		767434FE2465DF7700227A56 /* View+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+AutoLayout.swift"; sourceTree = "<group>"; };
-		767434FF2465DF7700227A56 /* StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
-		768B64FE2490346600DE4663 /* Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margin.swift; sourceTree = "<group>"; };
-		76DFF6462495045D009AD4E9 /* LayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
+		76B76F0D25188948002061F6 /* Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
+		76B76F0E25188948002061F6 /* StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		76B76F0F25188948002061F6 /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
+		76B76F1025188948002061F6 /* Margin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Margin.swift; sourceTree = "<group>"; };
+		76B76F1125188948002061F6 /* Dimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
+		76B76F1225188948002061F6 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		76B76F1325188948002061F6 /* View+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+AutoLayout.swift"; sourceTree = "<group>"; };
+		76B76F1425188948002061F6 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		"QuickConstraint::QuickConstraint::Product" /* QuickConstraint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QuickConstraint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -41,17 +41,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76B76F0C25188948002061F6 /* QuickConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				76B76F0D25188948002061F6 /* Anchor.swift */,
+				76B76F0E25188948002061F6 /* StackView.swift */,
+				76B76F0F25188948002061F6 /* Axis.swift */,
+				76B76F1025188948002061F6 /* Margin.swift */,
+				76B76F1125188948002061F6 /* Dimension.swift */,
+				76B76F1225188948002061F6 /* Typealias.swift */,
+				76B76F1325188948002061F6 /* View+AutoLayout.swift */,
+				76B76F1425188948002061F6 /* LayoutConstraint.swift */,
+			);
+			path = QuickConstraint;
+			sourceTree = "<group>";
+		};
 		OBJ_12 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				767434FF2465DF7700227A56 /* StackView.swift */,
-				767434FE2465DF7700227A56 /* View+AutoLayout.swift */,
-				765A81A6244CFEAF00AA8E73 /* Anchor.swift */,
-				765A81A7244CFEAF00AA8E73 /* Axis.swift */,
-				765A81A5244CFEAF00AA8E73 /* Dimension.swift */,
-				767434FA246583D400227A56 /* Typealias.swift */,
-				768B64FE2490346600DE4663 /* Margin.swift */,
-				76DFF6462495045D009AD4E9 /* LayoutConstraint.swift */,
+				76B76F0C25188948002061F6 /* QuickConstraint */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -129,14 +137,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				765A81AB244CFEAF00AA8E73 /* Anchor.swift in Sources */,
-				767434FB246583D400227A56 /* Typealias.swift in Sources */,
-				765A81AC244CFEAF00AA8E73 /* Axis.swift in Sources */,
-				765A81AA244CFEAF00AA8E73 /* Dimension.swift in Sources */,
-				76DFF6472495045D009AD4E9 /* LayoutConstraint.swift in Sources */,
-				768B64FF2490346600DE4663 /* Margin.swift in Sources */,
-				767435002465DF7700227A56 /* View+AutoLayout.swift in Sources */,
-				767435012465DF7700227A56 /* StackView.swift in Sources */,
+				76B76F1525188948002061F6 /* Anchor.swift in Sources */,
+				76B76F1825188948002061F6 /* Margin.swift in Sources */,
+				76B76F1725188948002061F6 /* Axis.swift in Sources */,
+				76B76F1B25188948002061F6 /* View+AutoLayout.swift in Sources */,
+				76B76F1C25188948002061F6 /* LayoutConstraint.swift in Sources */,
+				76B76F1925188948002061F6 /* Dimension.swift in Sources */,
+				76B76F1A25188948002061F6 /* Typealias.swift in Sources */,
+				76B76F1625188948002061F6 /* StackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
