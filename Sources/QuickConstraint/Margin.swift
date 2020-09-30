@@ -20,7 +20,7 @@ import UIKit
 import AppKit
 #endif
 
-/// Enum providing typed way to provide margins for constraints
+/// Enum providing typed way to provide margins for constraints.
 public enum Margin {
     case int(Int)
     case int8(Int8)
@@ -31,7 +31,7 @@ public enum Margin {
     case float(Float)
     case cgfloat(CGFloat)
     
-    /// Converts associated enum value  to Core Graphics compatible CGFloat type value
+    /// Converts associated enum value  to Core Graphics compatible CGFloat type value.
     var value: CGFloat {
         switch self {
         case .int(let value): return CGFloat(value)

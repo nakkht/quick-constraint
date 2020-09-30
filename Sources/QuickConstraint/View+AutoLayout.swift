@@ -20,16 +20,16 @@ import UIKit
 import AppKit
 #endif
 
-/// Provides convienience methods for using auto layout and constraining view to the parent
+/// Provides convienience methods for using auto layout and constraining view to the parent.
 public extension View {
     
     /// Creates the most basic  constraints dedicated for constraining to 4 anchors of the parent veiw: top -> top, bottom -> bottom. leading -> leading, trailing -> trailing.
-    /// Will attemp to use `safeAreaLayoutGuide` if possible
+    /// Will attemp to use `safeAreaLayoutGuide` if possible.
     /// - Parameters:
-    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
-    ///   - anchor: anchor type to be used for determining which constraints to generate. Defaults to `all` and generates constaints to all 4 sides,`
-    ///   - margin: number  to be used as a constant for generated constraints. Same value applied to all generated constraints if there are multiple
-    /// - Returns: generated  active constraints
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
+    ///   - anchor: anchor type to be used for determining which constraints to generate. Defaults to `all` and generates constaints to all 4 sides.
+    ///   - margin: number  to be used as a constant for generated constraints. Same value applied to all generated constraints if there are multiple.
+    /// - Returns: generated  active constraints.
     @inline(__always)
     @discardableResult
     func pin(toSafeArea view: View, anchor: Anchor = .all, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
@@ -46,21 +46,21 @@ public extension View {
     
     /// Convenience function for creating constraints while utilizing Margin enum
     /// - Parameters:
-    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
-    ///   - anchor: anchor type to be used for determining which constraints to generate. Defaults to `all` and generates constaints to all 4 sides,`
-    ///   - margin: number  to be used as a constant for generated constraints. Same value applied to all generated constraints if there are multiple. Will automatically handle conversion to CGFloat
-    /// - Returns: generated  active constraints
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
+    ///   - anchor: anchor type to be used for determining which constraints to generate. Defaults to `all` and generates constaints to all 4 sides.
+    ///   - margin: number  to be used as a constant for generated constraints. Same value applied to all generated constraints if there are multiple. Will automatically handle conversion to CGFloat.
+    /// - Returns: generated  active constraints.
     @inline(__always)
     @discardableResult
     func pin(to view: View, anchor: Anchor = .all, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         return pin(toGuide: view, anchor: anchor, margin: margin.value, isActive: isActive)
     }
     
-    /// Creates opposite constraints: source top anchor to bottom anchor of the target view
+    /// Creates opposite constraints: source top anchor to bottom anchor of the target view.
     /// - Parameters:
-    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
-    ///   - margin: number of points to be used for generating margin for the view
-    /// - Returns: generated active constraints
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
+    ///   - margin: number of points to be used for generating margin for the view.
+    /// - Returns: generated active constraints.
     @inline(__always)
     @discardableResult
     func pinTopToBottom(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> LayoutConstraint {
@@ -70,11 +70,11 @@ public extension View {
         return constraint
     }
     
-    /// Creates opposite constraints: source bottom anchor to top anchor of the target view
+    /// Creates opposite constraints: source bottom anchor to top anchor of the target view.
     /// - Parameters:
-    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
-    ///   - margin: number of points to be used for generating margin for the view
-    /// - Returns: generated active constraints
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
+    ///   - margin: number of points to be used for generating margin for the view.
+    /// - Returns: generated active constraints.
     @inline(__always)
     @discardableResult
     func pinBottomToTop(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> LayoutConstraint {
@@ -84,11 +84,11 @@ public extension View {
         return constraint
     }
     
-    /// Creates opposite constraints: source leading anchor to trailing anchor of the target view
+    /// Creates opposite constraints: source leading anchor to trailing anchor of the target view.
     /// - Parameters:
-    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
-    ///   - margin: number of points to be used for generating margin for the view
-    /// - Returns: generated active constraints
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
+    ///   - margin: number of points to be used for generating margin for the view.
+    /// - Returns: generated active constraints.
     @inline(__always)
     @discardableResult
     func pinLeadingToTrailing(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> LayoutConstraint {
@@ -98,11 +98,11 @@ public extension View {
         return constraint
     }
     
-    /// Creates opposite constraints: source trailing anchor to leading anchor of the target view
+    /// Creates opposite constraints: source trailing anchor to leading anchor of the target view.
     /// - Parameters:
-    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
-    ///   - margin: number of points to be used for generating margin for the view
-    /// - Returns: generated active constraints
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
+    ///   - margin: number of points to be used for generating margin for the view.
+    /// - Returns: generated active constraints.
     @inline(__always)
     @discardableResult
     func pinTrailingToLeading(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> LayoutConstraint {
@@ -216,11 +216,11 @@ public extension View {
         return constraints
     }
     
-    /// Creates constraints for width/height dimensions with specified size
+    /// Creates constraints for width/height dimensions with specified size.
     /// - Parameters:
-    ///   - dimension: dimension type to be used for determining which constraints to generate. Use `all` to generate width and height constraints simultaneously
-    ///   - value: size of set dimensions
-    /// - Returns: generated active constraints
+    ///   - dimension: dimension type to be used for determining which constraints to generate. Use `all` to generate width and height constraints simultaneously.
+    ///   - value: size of set dimensions.
+    /// - Returns: generated active constraints.
     @inline(__always)
     @discardableResult
     func set(_ dimension: Dimension, _ value: CGFloat) -> [LayoutConstraint] {
@@ -232,11 +232,11 @@ public extension View {
         return constraints
     }
     
-    /// Creates constraints based on center x and y axis
+    /// Creates constraints based on center x and y axis.
     /// - Parameters:
-    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy
-    ///   - axis: axis type to be used for determining which constraints to generate. Use `all` to generate center constraints for x and y axis simultaneously
-    /// - Returns: generated active constraints
+    ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
+    ///   - axis: axis type to be used for determining which constraints to generate. Use `all` to generate center constraints for x and y axis simultaneously.
+    /// - Returns: generated active constraints.
     @inline(__always)
     @discardableResult
     func center(to view: View, axis: Axis? = nil) -> [LayoutConstraint] {
