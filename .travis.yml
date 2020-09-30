@@ -49,4 +49,4 @@ jobs:
       env: DESTINATION='platform=OS X,arch=x86_64'
 
 script:
-  - xcodebuild build -project $PROJECT -scheme $SCHEME -destination "${DESTINATION}" | xcpretty
+  - set -o pipefail && xcodebuild build -project $PROJECT -scheme $SCHEME -destination "${DESTINATION}" | xcpretty
