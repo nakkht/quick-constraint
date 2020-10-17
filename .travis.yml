@@ -29,7 +29,7 @@ jobs:
       env: DESTINATION='platform=iOS Simulator,name=iPhone 5s,OS=9.0'
 
     - osx_image: xcode12.2
-      env: DESTINATION='platform=tvOS Simulator,name=Apple TV,OS=14.0'
+      env: DESTINATION='platform=tvOS Simulator,name=Apple TV,OS=14.2'
     - osx_image: xcode12.2
       env: DESTINATION='platform=tvOS Simulator,name=Apple TV,OS=13.4'
     - osx_image: xcode12.2
