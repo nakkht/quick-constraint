@@ -2,6 +2,7 @@
 
 [![build status](https://travis-ci.com/nakkht/quick-constraint.svg?branch=develop)](https://travis-ci.com/nakkht/quick-constraint)
 ![platforms](https://img.shields.io/badge/platforms-ios%20%7C%20osx%20%7C%20tvos-brightgreen)
+![code size](https://img.shields.io/github/languages/code-size/nakkht/quick-constraint?color=brightgreen)
 [![documentation](https://img.shields.io/badge/doc-reference-brightgreen)](https://nakkht.github.io/quick-constraint/)
 
 Extension functions for making layout programmatically easier and faster
