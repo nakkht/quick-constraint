@@ -9,16 +9,14 @@
 /* Begin PBXBuildFile section */
 		768B19F52492BD39009D99F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768B19F42492BD39009D99F3 /* AppDelegate.swift */; };
 		768B19F72492BD39009D99F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768B19F62492BD39009D99F3 /* SceneDelegate.swift */; };
-		768B19FB2492BD3B009D99F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768B19FA2492BD3B009D99F3 /* Assets.xcassets */; };
 		768B1A092492C799009D99F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768B1A082492C799009D99F3 /* ViewController.swift */; };
 		768B1A0C2492C8D1009D99F3 /* QuickConstraint in Frameworks */ = {isa = PBXBuildFile; productRef = 768B1A0B2492C8D1009D99F3 /* QuickConstraint */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		768B19F12492BD39009D99F3 /* QuickConstraintDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickConstraintDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		768B19F12492BD39009D99F3 /* QuickConstraintExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickConstraintExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		768B19F42492BD39009D99F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		768B19F62492BD39009D99F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		768B19FA2492BD3B009D99F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		768B1A022492BD3B009D99F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		768B1A082492C799009D99F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,7 +36,7 @@
 		768B19E82492BD39009D99F3 = {
 			isa = PBXGroup;
 			children = (
-				768B19F32492BD39009D99F3 /* QuickConstraintDemo */,
+				768B19F32492BD39009D99F3 /* QuickConstraintExample */,
 				768B19F22492BD39009D99F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,29 +44,28 @@
 		768B19F22492BD39009D99F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				768B19F12492BD39009D99F3 /* QuickConstraintDemo.app */,
+				768B19F12492BD39009D99F3 /* QuickConstraintExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		768B19F32492BD39009D99F3 /* QuickConstraintDemo */ = {
+		768B19F32492BD39009D99F3 /* QuickConstraintExample */ = {
 			isa = PBXGroup;
 			children = (
 				768B19F42492BD39009D99F3 /* AppDelegate.swift */,
 				768B19F62492BD39009D99F3 /* SceneDelegate.swift */,
-				768B19FA2492BD3B009D99F3 /* Assets.xcassets */,
 				768B1A022492BD3B009D99F3 /* Info.plist */,
 				768B1A082492C799009D99F3 /* ViewController.swift */,
 			);
-			path = QuickConstraintDemo;
+			path = QuickConstraintExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		768B19F02492BD39009D99F3 /* QuickConstraintDemo */ = {
+		768B19F02492BD39009D99F3 /* QuickConstraintExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 768B1A052492BD3B009D99F3 /* Build configuration list for PBXNativeTarget "QuickConstraintDemo" */;
+			buildConfigurationList = 768B1A052492BD3B009D99F3 /* Build configuration list for PBXNativeTarget "QuickConstraintExample" */;
 			buildPhases = (
 				768B19ED2492BD39009D99F3 /* Sources */,
 				768B19EE2492BD39009D99F3 /* Frameworks */,
@@ -78,12 +75,12 @@
 			);
 			dependencies = (
 			);
-			name = QuickConstraintDemo;
+			name = QuickConstraintExample;
 			packageProductDependencies = (
 				768B1A0B2492C8D1009D99F3 /* QuickConstraint */,
 			);
 			productName = QuickConstraintDemo;
-			productReference = 768B19F12492BD39009D99F3 /* QuickConstraintDemo.app */;
+			productReference = 768B19F12492BD39009D99F3 /* QuickConstraintExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -93,7 +90,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = neqsoft;
 				TargetAttributes = {
 					768B19F02492BD39009D99F3 = {
@@ -101,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 768B19EC2492BD39009D99F3 /* Build configuration list for PBXProject "QuickConstraintDemo" */;
+			buildConfigurationList = 768B19EC2492BD39009D99F3 /* Build configuration list for PBXProject "QuickConstraintExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				768B19F02492BD39009D99F3 /* QuickConstraintDemo */,
+				768B19F02492BD39009D99F3 /* QuickConstraintExample */,
 			);
 		};
 /* End PBXProject section */
@@ -127,7 +124,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				768B19FB2492BD3B009D99F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +169,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -233,6 +230,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -264,17 +262,16 @@
 		768B1A062492BD3B009D99F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = QuickConstraintDemo/Info.plist;
+				INFOPLIST_FILE = QuickConstraintExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.neqsoft.quickconstraintdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neqsoft.quickconstraintexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -285,17 +282,16 @@
 		768B1A072492BD3B009D99F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = QuickConstraintDemo/Info.plist;
+				INFOPLIST_FILE = QuickConstraintExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.neqsoft.quickconstraintdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neqsoft.quickconstraintexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -306,7 +302,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		768B19EC2492BD39009D99F3 /* Build configuration list for PBXProject "QuickConstraintDemo" */ = {
+		768B19EC2492BD39009D99F3 /* Build configuration list for PBXProject "QuickConstraintExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				768B1A032492BD3B009D99F3 /* Debug */,
@@ -315,7 +311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		768B1A052492BD3B009D99F3 /* Build configuration list for PBXNativeTarget "QuickConstraintDemo" */ = {
+		768B1A052492BD3B009D99F3 /* Build configuration list for PBXNativeTarget "QuickConstraintExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				768B1A062492BD3B009D99F3 /* Debug */,
