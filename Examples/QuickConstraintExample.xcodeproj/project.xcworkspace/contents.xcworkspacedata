@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/nakkht/dev/quick-constraint/Examples/QuickConstraintExample.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
