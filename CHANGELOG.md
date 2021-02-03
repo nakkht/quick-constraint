@@ -2,6 +2,11 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.5.1 - [2021-02-03]
+
+Changed
+* `toSafeArea` to `toSafeAreaOf`
+
 ## v0.5.0 - [2020-09-21]
 
 Added
@@ -24,7 +29,6 @@ Removed
 
 Fixed
 * Shown project version in documentation
-
 
 ## v0.4.1 - [2020-06-14]
 
