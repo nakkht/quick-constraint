@@ -32,7 +32,7 @@ public extension View {
     /// - Returns: generated  active constraints.
     @inline(__always)
     @discardableResult
-    func pin(toSafeArea view: View, anchor: Anchor = .all, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+    func pin(toSafeAreaOf view: View, anchor: Anchor = .all, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         #if os(iOS) || os(tvOS)
         if #available(iOS 11.0, tvOS 11.0, *) {
             return pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin.value, isActive: isActive)
