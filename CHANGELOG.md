@@ -2,6 +2,11 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.6.0 - [2021-xx-xx]
+
+Added
+* UICollectionView extension
+
 ## v0.5.1 - [2021-02-03]
 
 Changed
