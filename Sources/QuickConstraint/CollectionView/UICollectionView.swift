@@ -17,10 +17,10 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
-public extension CollectionView {
+public extension UICollectionView {
     
-    convenience init(frame: CGRect = .zero, delegate: CollectionViewDelegate, spacing: CGFloat = 0) {
-        let layout = CollectionViewFlowLayout()
+    convenience init(frame: CGRect = .zero, delegate: UICollectionViewDelegate, spacing: CGFloat = 0) {
+        let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = spacing
         self.init(frame: frame, delegate: delegate, layout: layout)
     }
