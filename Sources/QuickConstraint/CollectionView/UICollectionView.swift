@@ -14,12 +14,13 @@
 // limitations under the License.
 //  
 
+#if os(iOS) || os(tvOS)
 import UIKit
 
-public extension UICollectionView {
+public extension CollectionView {
     
-    convenience init(frame: CGRect = .zero, delegate: UICollectionViewDelegate, spacing: CGFloat = 0) {
-        let layout = UICollectionViewFlowLayout()
+    convenience init(frame: CGRect = .zero, delegate: CollectionViewDelegate, spacing: CGFloat = 0) {
+        let layout = CollectionViewFlowLayout()
         layout.minimumLineSpacing = spacing
         self.init(frame: frame, delegate: delegate, layout: layout)
     }
@@ -45,3 +46,5 @@ public extension UICollectionView {
         self.performBatchUpdates({})
     }
 }
+
+#endif

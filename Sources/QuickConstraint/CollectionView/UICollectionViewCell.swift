@@ -14,9 +14,12 @@
 // limitations under the License.
 //  
 
+#if os(iOS) || os(tvOS)
 import UIKit
 
 public extension UICollectionViewCell {
     
     static var reusableIdentifier: String { String(describing: self) }
 }
+
+#endif

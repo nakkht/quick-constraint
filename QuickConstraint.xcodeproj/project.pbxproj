@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		768F1EC725D0A25A0096EECF /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F1EC525D0A25A0096EECF /* UICollectionView.swift */; };
+		768F1EC825D0A25A0096EECF /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F1EC625D0A25A0096EECF /* UICollectionViewCell.swift */; };
 		76B76F1525188948002061F6 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F0D25188948002061F6 /* Anchor.swift */; };
 		76B76F1625188948002061F6 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F0E25188948002061F6 /* StackView.swift */; };
 		76B76F1725188948002061F6 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76F0F25188948002061F6 /* Axis.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		768F1EC525D0A25A0096EECF /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		768F1EC625D0A25A0096EECF /* UICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
 		76B76F0D25188948002061F6 /* Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
 		76B76F0E25188948002061F6 /* StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		76B76F0F25188948002061F6 /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
@@ -41,9 +45,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		768F1EC425D0A25A0096EECF /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				768F1EC525D0A25A0096EECF /* UICollectionView.swift */,
+				768F1EC625D0A25A0096EECF /* UICollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		76B76F0C25188948002061F6 /* QuickConstraint */ = {
 			isa = PBXGroup;
 			children = (
+				768F1EC425D0A25A0096EECF /* CollectionView */,
 				76B76F0D25188948002061F6 /* Anchor.swift */,
 				76B76F0E25188948002061F6 /* StackView.swift */,
 				76B76F0F25188948002061F6 /* Axis.swift */,
@@ -139,7 +153,9 @@
 			files = (
 				76B76F1525188948002061F6 /* Anchor.swift in Sources */,
 				76B76F1825188948002061F6 /* Margin.swift in Sources */,
+				768F1EC825D0A25A0096EECF /* UICollectionViewCell.swift in Sources */,
 				76B76F1725188948002061F6 /* Axis.swift in Sources */,
+				768F1EC725D0A25A0096EECF /* UICollectionView.swift in Sources */,
 				76B76F1B25188948002061F6 /* View+AutoLayout.swift in Sources */,
 				76B76F1C25188948002061F6 /* LayoutConstraint.swift in Sources */,
 				76B76F1925188948002061F6 /* Dimension.swift in Sources */,
