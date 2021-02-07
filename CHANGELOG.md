@@ -7,6 +7,9 @@ All notable changes to QuickConstraint project.
 Added
 * UICollectionView extension
 
+Removed
+* Carthage/CocoaPods support
+
 ## v0.5.1 - [2021-02-03]
 
 Changed
