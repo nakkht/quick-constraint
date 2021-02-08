@@ -7,6 +7,9 @@ All notable changes to QuickConstraint project.
 Added
 * UICollectionView extension
 
+Changed
+* Minimum iOS/tvOS version to 10
+
 Removed
 * Carthage/CocoaPods support
 
