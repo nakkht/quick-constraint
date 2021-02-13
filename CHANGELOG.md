@@ -2,13 +2,14 @@
 
 All notable changes to QuickConstraint project.
 
-## v0.6.0 - [2021-xx-xx]
+## v0.6.0 - [2021-02-13]
 
 Added
 * UICollectionView extension
 
 Changed
 * Minimum iOS/tvOS version to 10
+* `Margin` struct and returned to using `CGFloat` value
 
 Removed
 * Carthage/CocoaPods support

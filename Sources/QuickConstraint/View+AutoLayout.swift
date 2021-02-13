@@ -32,12 +32,12 @@ public extension View {
     /// - Returns: generated  active constraints.
     @inline(__always)
     @discardableResult
-    func pin(toSafeAreaOf view: View, anchor: Anchor = .all, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+    func pin(toSafeAreaOf view: View, anchor: Anchor = .all, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         #if os(iOS) || os(tvOS)
         if #available(iOS 11.0, tvOS 11.0, *) {
-            return pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin.value, isActive: isActive)
+            return pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin, isActive: isActive)
         } else {
-            return pin(toGuide: view, anchor: anchor, margin: margin.value, isActive: isActive)
+            return pin(toGuide: view, anchor: anchor, margin: margin, isActive: isActive)
         }
         #else
         return pin(toGuide: view, anchor: anchor, margin: margin.value, isActive: isHidden)
@@ -52,8 +52,8 @@ public extension View {
     /// - Returns: generated  active constraints.
     @inline(__always)
     @discardableResult
-    func pin(to view: View, anchor: Anchor = .all, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
-        return pin(toGuide: view, anchor: anchor, margin: margin.value, isActive: isActive)
+    func pin(to view: View, anchor: Anchor = .all, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+        return pin(toGuide: view, anchor: anchor, margin: margin, isActive: isActive)
     }
     
     /// Creates opposite constraints: source top anchor to bottom anchor of the target view.
@@ -63,9 +63,9 @@ public extension View {
     /// - Returns: generated active constraints.
     @inline(__always)
     @discardableResult
-    func pinTopToBottom(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> LayoutConstraint {
+    func pinTopToBottom(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> LayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let constraint = topAnchor.constraint(equalTo: view.bottomAnchor, constant: margin.value)
+        let constraint = topAnchor.constraint(equalTo: view.bottomAnchor, constant: margin)
         constraint.isActive = isActive
         return constraint
     }
@@ -77,9 +77,9 @@ public extension View {
     /// - Returns: generated active constraints.
     @inline(__always)
     @discardableResult
-    func pinBottomToTop(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> LayoutConstraint {
+    func pinBottomToTop(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> LayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let constraint = bottomAnchor.constraint(equalTo: view.topAnchor, constant: -margin.value)
+        let constraint = bottomAnchor.constraint(equalTo: view.topAnchor, constant: -margin)
         constraint.isActive = isActive
         return constraint
     }
@@ -91,9 +91,9 @@ public extension View {
     /// - Returns: generated active constraints.
     @inline(__always)
     @discardableResult
-    func pinLeadingToTrailing(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> LayoutConstraint {
+    func pinLeadingToTrailing(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> LayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let constraint = leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: margin.value)
+        let constraint = leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: margin)
         constraint.isActive = isActive
         return constraint
     }
@@ -105,27 +105,27 @@ public extension View {
     /// - Returns: generated active constraints.
     @inline(__always)
     @discardableResult
-    func pinTrailingToLeading(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> LayoutConstraint {
+    func pinTrailingToLeading(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> LayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let constraint = trailingAnchor.constraint(equalTo: view.leadingAnchor, constant: -margin.value)
+        let constraint = trailingAnchor.constraint(equalTo: view.leadingAnchor, constant: -margin)
         constraint.isActive = isActive
         return constraint
     }
     
     @inline(__always)
     @discardableResult
-    func pinToTopLeading(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
-        return pin(toGuide: view, anchors: [.top, .leading], margin: margin.value, isActive: isActive)
+    func pinToTopLeading(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+        return pin(toGuide: view, anchors: [.top, .leading], margin: margin, isActive: isActive)
     }
     
     @inline(__always)
     @discardableResult
-    func pinToTopLeading(ofSafeArea view: View, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+    func pinToTopLeading(ofSafeArea view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         #if os(iOS) || os(tvOS)
         if #available(iOS 11.0, tvOS 11.0, *) {
-            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.top, .leading], margin: margin.value, isActive: isActive)
+            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.top, .leading], margin: margin, isActive: isActive)
         } else {
-            return pin(toGuide: view, anchors: [.top, .leading], margin: margin.value, isActive: isActive)
+            return pin(toGuide: view, anchors: [.top, .leading], margin: margin, isActive: isActive)
         }
         #else
         return pin(toGuide: view, anchors: [.top, .leading], margin: margin.value, isActive: isActive)
@@ -134,18 +134,18 @@ public extension View {
     
     @inline(__always)
     @discardableResult
-    func pinToTopTrailing(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
-        return pin(toGuide: view, anchors: [.top, .trailing], margin: margin.value, isActive: isActive)
+    func pinToTopTrailing(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+        return pin(toGuide: view, anchors: [.top, .trailing], margin: margin, isActive: isActive)
     }
     
     @inline(__always)
     @discardableResult
-    func pinToTopTrailing(ofSafeArea view: View, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+    func pinToTopTrailing(ofSafeArea view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         #if os(iOS) || os(tvOS)
         if #available(iOS 11.0, tvOS 11.0, *) {
-            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.top, .trailing], margin: margin.value, isActive: isActive)
+            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.top, .trailing], margin: margin, isActive: isActive)
         } else {
-            return pin(toGuide: view, anchors: [.top, .trailing], margin: margin.value, isActive: isActive)
+            return pin(toGuide: view, anchors: [.top, .trailing], margin: margin, isActive: isActive)
         }
         #else
         return pin(toGuide: view, anchors: [.top, .trailing], margin: margin.value, isActive: isActive)
@@ -154,18 +154,18 @@ public extension View {
     
     @inline(__always)
     @discardableResult
-    func pinToBottomLeading(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
-        return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin.value, isActive: isActive)
+    func pinToBottomLeading(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+        return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin, isActive: isActive)
     }
     
     @inline(__always)
     @discardableResult
-    func pinToBottomLeading(ofSafeArea view: View, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+    func pinToBottomLeading(ofSafeArea view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         #if os(iOS) || os(tvOS)
         if #available(iOS 11.0, tvOS 11.0, *) {
-            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.bottom, .leading], margin: margin.value, isActive: isActive)
+            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.bottom, .leading], margin: margin, isActive: isActive)
         } else {
-            return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin.value, isActive: isActive)
+            return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin, isActive: isActive)
         }
         #else
         return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin.value, isActive: isActive)
@@ -174,18 +174,18 @@ public extension View {
     
     @inline(__always)
     @discardableResult
-    func pinToBottomTrailing(of view: View, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
-        return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin.value, isActive: isActive)
+    func pinToBottomTrailing(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+        return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin, isActive: isActive)
     }
     
     @inline(__always)
     @discardableResult
-    func pinToBottomTrailing(ofSafeArea view: View, margin: Margin = .int(0), isActive: Bool = true) -> [Anchor: LayoutConstraint] {
+    func pinToBottomTrailing(ofSafeArea view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         #if os(iOS) || os(tvOS)
         if #available(iOS 11.0, tvOS 11.0, *) {
-            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.bottom, .trailing], margin: margin.value, isActive: isActive)
+            return pin(toGuide: view.safeAreaLayoutGuide, anchors: [.bottom, .trailing], margin: margin, isActive: isActive)
         } else {
-            return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin.value, isActive: isActive)
+            return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin, isActive: isActive)
         }
         #else
         return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin.value, isActive: isActive)
