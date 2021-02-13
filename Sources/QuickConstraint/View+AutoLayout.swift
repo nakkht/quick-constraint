@@ -40,7 +40,7 @@ public extension View {
             return pin(toGuide: view, anchor: anchor, margin: margin, isActive: isActive)
         }
         #else
-        return pin(toGuide: view, anchor: anchor, margin: margin.value, isActive: isHidden)
+        return pin(toGuide: view, anchor: anchor, margin: margin, isActive: isHidden)
         #endif
     }
     
@@ -128,7 +128,7 @@ public extension View {
             return pin(toGuide: view, anchors: [.top, .leading], margin: margin, isActive: isActive)
         }
         #else
-        return pin(toGuide: view, anchors: [.top, .leading], margin: margin.value, isActive: isActive)
+        return pin(toGuide: view, anchors: [.top, .leading], margin: margin, isActive: isActive)
         #endif
     }
     
@@ -148,7 +148,7 @@ public extension View {
             return pin(toGuide: view, anchors: [.top, .trailing], margin: margin, isActive: isActive)
         }
         #else
-        return pin(toGuide: view, anchors: [.top, .trailing], margin: margin.value, isActive: isActive)
+        return pin(toGuide: view, anchors: [.top, .trailing], margin: margin, isActive: isActive)
         #endif
     }
     
@@ -168,7 +168,7 @@ public extension View {
             return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin, isActive: isActive)
         }
         #else
-        return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin.value, isActive: isActive)
+        return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin, isActive: isActive)
         #endif
     }
     
@@ -188,7 +188,7 @@ public extension View {
             return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin, isActive: isActive)
         }
         #else
-        return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin.value, isActive: isActive)
+        return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin, isActive: isActive)
         #endif
     }
     

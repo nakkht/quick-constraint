@@ -2,6 +2,11 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.6.1 - [2021-02-13]
+
+Fixed
+* Build for macOS platform
+
 ## v0.6.0 - [2021-02-13]
 
 Added
