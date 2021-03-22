@@ -22,18 +22,27 @@ import AppKit
 
 public extension StackView {
     
-    convenience init(axis: StackAxis, alignment: Alignment, distribution: Distribution, spacing: CGFloat = 0) {
+    #if os(iOS) || os(tvOS)
+    convenience init(axis: StackAxis, alignment: Alignment = .fill, distribution: Distribution = .fill, spacing: CGFloat = 0) {
         self.init()
         self.translatesAutoresizingMaskIntoConstraints = false
         self.alignment = alignment
         self.distribution = distribution
         self.spacing = spacing
-        #if os(iOS) || os(tvOS)
         self.axis = axis
-        #else
+   }
+    #endif
+    
+    #if os(macOS)
+    convenience init(axis: StackAxis, alignment: Alignment, distribution: Distribution = .fill, spacing: CGFloat = 0) {
+        self.init()
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.alignment = alignment
+        self.distribution = distribution
+        self.spacing = spacing
         self.orientation = axis
-        #endif
     }
+    #endif
     
     @inline(__always)
     func addArrangedSubviews(_ arrangedSubviews: [View]) {
