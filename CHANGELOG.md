@@ -2,6 +2,11 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.7.0 - [2021-02-23]
+
+Changed
+* UIStackView initializers now have default values for alignment and distribution
+
 ## v0.6.1 - [2021-02-13]
 
 Fixed
