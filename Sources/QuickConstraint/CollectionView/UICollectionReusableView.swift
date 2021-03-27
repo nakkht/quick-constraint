@@ -17,7 +17,7 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
-public extension UICollectionViewCell {
+public extension UICollectionReusableView {
     
     static var reusableIdentifier: String { String(describing: self) }
 }

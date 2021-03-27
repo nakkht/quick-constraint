@@ -2,6 +2,11 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.7.1 - [2021-03-27]
+
+Fixed
+* UICollectionViewCell reusableIdentifier property moved up to UICollectionReusableView
+
 ## v0.7.0 - [2021-03-23]
 
 Changed
