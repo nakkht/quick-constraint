@@ -2,6 +2,11 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.8.0 - [2021-04-03]
+
+Changed
+* `activate`/`deactivate` functions with `activated`/`deactivated` computed properties
+
 ## v0.7.1 - [2021-03-27]
 
 Fixed
