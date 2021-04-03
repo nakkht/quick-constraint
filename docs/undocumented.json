@@ -23,21 +23,21 @@
     },
     {
       "file": "/Users/nakkht/dev/quick-constraint/Sources/QuickConstraint/StackView.swift",
-      "line": 25,
+      "line": 37,
       "symbol": "StackView.init(axis:alignment:distribution:spacing:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nakkht/dev/quick-constraint/Sources/QuickConstraint/StackView.swift",
-      "line": 39,
+      "line": 48,
       "symbol": "StackView.addArrangedSubviews(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nakkht/dev/quick-constraint/Sources/QuickConstraint/StackView.swift",
-      "line": 44,
+      "line": 53,
       "symbol": "StackView.addArrangedSubviews(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
