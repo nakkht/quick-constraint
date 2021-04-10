@@ -18,13 +18,13 @@
 import UIKit
 
 public extension UICollectionView {
-    
+
     convenience init(frame: CGRect = .zero, delegate: UICollectionViewDelegate, spacing: CGFloat = 0) {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = spacing
         self.init(frame: frame, delegate: delegate, layout: layout)
     }
-    
+
     convenience init(frame: CGRect = .zero, delegate: UICollectionViewDelegate, layout: UICollectionViewFlowLayout) {
         self.init(frame: frame, collectionViewLayout: layout)
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -33,13 +33,13 @@ public extension UICollectionView {
         self.scrollIndicatorInsets = .zero
         self.delegate = delegate
     }
-    
+
     func configureWith(_ cellType: UICollectionViewCell.Type, dataSource: UICollectionViewDataSource) {
         register(cellType, forCellWithReuseIdentifier: cellType.reusableIdentifier)
         self.dataSource = dataSource
         self.performBatchUpdates({})
     }
-    
+
     func configureWith(_ cellTypes: [UICollectionViewCell.Type], dataSource: UICollectionViewDataSource) {
         cellTypes.forEach { register($0, forCellWithReuseIdentifier: $0.reusableIdentifier) }
         self.dataSource = dataSource

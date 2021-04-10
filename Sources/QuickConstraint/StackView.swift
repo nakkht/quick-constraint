@@ -21,7 +21,7 @@ import AppKit
 #endif
 
 public extension StackView {
-    
+
     #if os(iOS) || os(tvOS)
     convenience init(axis: StackAxis, alignment: Alignment = .fill, distribution: Distribution = .fill, spacing: CGFloat = 0) {
         self.init()
@@ -32,7 +32,7 @@ public extension StackView {
         self.axis = axis
    }
     #endif
-    
+
     #if os(macOS)
     convenience init(axis: StackAxis, alignment: Alignment, distribution: Distribution = .fill, spacing: CGFloat = 0) {
         self.init()
@@ -43,12 +43,12 @@ public extension StackView {
         self.orientation = axis
     }
     #endif
-    
+
     @inline(__always)
     func addArrangedSubviews(_ arrangedSubviews: [View]) {
         arrangedSubviews.forEach { addArrangedSubview($0) }
     }
-    
+
     @inline(__always)
     func addArrangedSubviews(_ arrangedSubviews: View...) {
         arrangedSubviews.forEach { addArrangedSubview($0) }

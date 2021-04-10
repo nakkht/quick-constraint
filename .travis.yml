@@ -45,4 +45,5 @@ jobs:
       env: DESTINATION='platform=OS X,arch=x86_64'
 
 script:
+  - swiftlint
   - set -o pipefail && xcodebuild build -workspace $WORKSPACE -scheme $SCHEME -destination "${DESTINATION}" | xcpretty

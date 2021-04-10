@@ -22,7 +22,7 @@ import AppKit
 
 /// Provides convienience methods for using auto layout and constraining view to the parent.
 public extension View {
-    
+
     /// Creates the most basic  constraints dedicated for constraining to 4 anchors of the parent veiw: top -> top, bottom -> bottom. leading -> leading, trailing -> trailing.
     /// Will attemp to use `safeAreaLayoutGuide` if possible.
     /// - Parameters:
@@ -43,7 +43,7 @@ public extension View {
         return pin(toGuide: view, anchor: anchor, margin: margin, isActive: isHidden)
         #endif
     }
-    
+
     /// Convenience function for creating constraints while utilizing Margin enum
     /// - Parameters:
     ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
@@ -55,7 +55,7 @@ public extension View {
     func pin(to view: View, anchor: Anchor = .all, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         return pin(toGuide: view, anchor: anchor, margin: margin, isActive: isActive)
     }
-    
+
     /// Creates opposite constraints: source top anchor to bottom anchor of the target view.
     /// - Parameters:
     ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
@@ -69,7 +69,7 @@ public extension View {
         constraint.isActive = isActive
         return constraint
     }
-    
+
     /// Creates opposite constraints: source bottom anchor to top anchor of the target view.
     /// - Parameters:
     ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
@@ -83,7 +83,7 @@ public extension View {
         constraint.isActive = isActive
         return constraint
     }
-    
+
     /// Creates opposite constraints: source leading anchor to trailing anchor of the target view.
     /// - Parameters:
     ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
@@ -97,7 +97,7 @@ public extension View {
         constraint.isActive = isActive
         return constraint
     }
-    
+
     /// Creates opposite constraints: source trailing anchor to leading anchor of the target view.
     /// - Parameters:
     ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.
@@ -111,13 +111,13 @@ public extension View {
         constraint.isActive = isActive
         return constraint
     }
-    
+
     @inline(__always)
     @discardableResult
     func pinToTopLeading(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         return pin(toGuide: view, anchors: [.top, .leading], margin: margin, isActive: isActive)
     }
-    
+
     @inline(__always)
     @discardableResult
     func pinToTopLeading(ofSafeArea view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
@@ -131,13 +131,13 @@ public extension View {
         return pin(toGuide: view, anchors: [.top, .leading], margin: margin, isActive: isActive)
         #endif
     }
-    
+
     @inline(__always)
     @discardableResult
     func pinToTopTrailing(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         return pin(toGuide: view, anchors: [.top, .trailing], margin: margin, isActive: isActive)
     }
-    
+
     @inline(__always)
     @discardableResult
     func pinToTopTrailing(ofSafeArea view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
@@ -151,13 +151,13 @@ public extension View {
         return pin(toGuide: view, anchors: [.top, .trailing], margin: margin, isActive: isActive)
         #endif
     }
-    
+
     @inline(__always)
     @discardableResult
     func pinToBottomLeading(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin, isActive: isActive)
     }
-    
+
     @inline(__always)
     @discardableResult
     func pinToBottomLeading(ofSafeArea view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
@@ -171,13 +171,13 @@ public extension View {
         return pin(toGuide: view, anchors: [.bottom, .leading], margin: margin, isActive: isActive)
         #endif
     }
-    
+
     @inline(__always)
     @discardableResult
     func pinToBottomTrailing(of view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
         return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin, isActive: isActive)
     }
-    
+
     @inline(__always)
     @discardableResult
     func pinToBottomTrailing(ofSafeArea view: View, margin: CGFloat = 0, isActive: Bool = true) -> [Anchor: LayoutConstraint] {
@@ -191,7 +191,7 @@ public extension View {
         return pin(toGuide: view, anchors: [.bottom, .trailing], margin: margin, isActive: isActive)
         #endif
     }
-    
+
     private func pin(toGuide guide: AnyObject, anchors: [Anchor], margin: CGFloat = 0, isActive: Bool) -> [Anchor: LayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
         var constraints = [Anchor: LayoutConstraint]()
@@ -204,7 +204,7 @@ public extension View {
         if isActive { LayoutConstraint.activate(Array(constraints.values)) }
         return constraints
     }
-    
+
     private func pin(toGuide guide: AnyObject, anchor: Anchor = .all, margin: CGFloat, isActive: Bool) -> [Anchor: LayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
         var constraints = [Anchor: LayoutConstraint]()
@@ -215,7 +215,7 @@ public extension View {
         if isActive { LayoutConstraint.activate(Array(constraints.values)) }
         return constraints
     }
-    
+
     /// Creates constraints for width/height dimensions with specified size.
     /// - Parameters:
     ///   - dimension: dimension type to be used for determining which constraints to generate. Use `all` to generate width and height constraints simultaneously.
@@ -231,7 +231,7 @@ public extension View {
         LayoutConstraint.activate(constraints)
         return constraints
     }
-    
+
     /// Creates constraints based on center x and y axis.
     /// - Parameters:
     ///   - view: target view to which apply constrainta. Can be parent view or view which shares the same parent. Both source and target views have to be part of the view hierarchy.

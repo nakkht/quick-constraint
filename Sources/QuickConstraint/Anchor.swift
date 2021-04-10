@@ -16,43 +16,43 @@
 
 /// Enum providing definitions of anchors, including combinations.
 public enum Anchor {
-    
+
     /// Represents all anchors.
     case all
-    
+
     /// Represents top anchor.
     case top
-    
+
     /// Represents bottom anchor.
     case bottom
-    
+
     /// Represents leading anchor.
     case leading
-    
+
     /// Represents trailing anchor.
     case trailing
-    
+
     /// Represents top and bottom anchors.
     case vertical
-    
+
     /// Represents leading and trailing anchors.
     case horizontal
-    
+
     /// Determines whether or not enum instance involves top anchor.
     var isTop: Bool {
         return self == .top || self == .all || self == .vertical
     }
-    
+
     /// Determines whether or not enum instance involves bottom anchor.
     var isBottom: Bool {
         return self == .bottom || self == .all || self == .vertical
     }
-    
+
     /// Determines whether or not enum instance involves leading anchor.
     var isLeading: Bool {
         return self == .leading || self == .all || self == .horizontal
     }
-    
+
     /// Determines whether or not enum instance involves trailing anchor.
     var isTrailing: Bool {
         return self == .trailing || self == .all || self == .horizontal

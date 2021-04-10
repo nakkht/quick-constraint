@@ -16,16 +16,16 @@
 
 /// Enum providing definitions of dimension options.
 public enum Dimension {
-    
+
     case width
     case height
     case size
-    
+
     /// Determines whether or not enum instance involves width dimentsion.
     var isWidth: Bool {
         return self == .width || self == .size
     }
-    
+
     /// Determines whether or not enum instance involves height dimentsion.
     var isHeight: Bool {
         return self == .height || self == .size

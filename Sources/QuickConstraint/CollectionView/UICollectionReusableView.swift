@@ -18,7 +18,7 @@
 import UIKit
 
 public extension UICollectionReusableView {
-    
+
     static var reusableIdentifier: String { String(describing: self) }
 }
 

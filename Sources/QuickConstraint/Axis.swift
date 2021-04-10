@@ -16,18 +16,18 @@
 
 /// Enum providing definitions of axis options.
 public enum Axis {
-    
+
     /// Represents horizontal axis.
     case x
-    
+
     /// Represents vertical axis.
     case y
-    
+
     /// Determines whether or not enum instance involves horizontal//x axis.
     var isX: Bool {
         return self == .x
     }
-    
+
     /// Determines whether or not enum instance involves vertical//y axis.
     var isY: Bool {
         return self == .y

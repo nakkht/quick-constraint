@@ -25,13 +25,13 @@ public typealias LayoutConstraint = NSLayoutConstraint
 
 /// Extensions for making operations on `NSLayoutConstraint` less vebose
 extension LayoutConstraint {
-    
+
     /// Sets `LayoutConstraint` `isActive` property to true and returns modified constraint.
     var activated: LayoutConstraint {
         self.isActive = true
         return self
     }
-    
+
     /// Sets `LayoutConstraint` `isActive` property to false and returns modified constraint.
     var deactivated: LayoutConstraint {
         self.isActive = false
