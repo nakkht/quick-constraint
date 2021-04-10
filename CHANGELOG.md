@@ -2,6 +2,11 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.8.1 - [2021-04-10]
+
+Added
+* Source code formatting using `swiftlint`
+
 ## v0.8.0 - [2021-04-03]
 
 Changed
