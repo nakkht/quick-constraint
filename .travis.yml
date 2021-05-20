@@ -46,4 +46,5 @@ jobs:
 
 script:
   - swiftlint --strict
-  - set -o pipefail && xcodebuild build -workspace $WORKSPACE -scheme $SCHEME -destination "${DESTINATION}" | xcpretty
+  - set -o pipefail
+  - xcodebuild build -workspace $WORKSPACE -scheme $SCHEME -destination "${DESTINATION}" | xcpretty
