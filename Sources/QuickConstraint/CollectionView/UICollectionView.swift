@@ -17,6 +17,7 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
+/// :nodoc:
 public extension UICollectionView {
 
     convenience init(frame: CGRect = .zero, delegate: UICollectionViewDelegate, spacing: CGFloat = 0) {
