@@ -2,6 +2,12 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.9.0 - [2021-08-04]
+
+Added
+* Missing documentation
+* Possibility to set height/width/size of the view based on another view's width/height/size
+
 ## v0.8.1 - [2021-04-10]
 
 Added

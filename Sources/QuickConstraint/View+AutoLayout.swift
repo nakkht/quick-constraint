@@ -216,9 +216,9 @@ public extension View {
         return constraints
     }
 
-    /// Creates constraints for width/height dimensions with specified size.
+    /// Creates constraints for width/height/size dimensions with specified size.
     /// - Parameters:
-    ///   - dimension: Dimension type to be used for determining which constraints to generate. Use `all` to generate width and height constraints simultaneously.
+    ///   - dimension: Dimension type to be used for determining which constraints to generate. Use `size` to generate width and height constraints simultaneously.
     ///   - value: Size of set dimensions.
     /// - Returns: Generated active constraints.
     @inline(__always)
@@ -228,6 +228,21 @@ public extension View {
         var constraints = [LayoutConstraint]()
         if dimension.isWidth { constraints.append(widthAnchor.constraint(equalToConstant: value)) }
         if dimension.isHeight { constraints.append(heightAnchor.constraint(equalToConstant: value)) }
+        LayoutConstraint.activate(constraints)
+        return constraints
+    }
+    
+    /// Creates constraints for width/height/size dimensions based on another view's width/height/size.
+    /// - Parameters:
+    ///   - dimension: Dimension type to be used for determining which dimension constraints to generate. Use `size` to generate width and height constraints simultaneously..
+    ///   - view: Parent of sibling view to use as a reference for constraints.
+    /// - Returns: Generated active constraints.
+    @discardableResult
+    func set(_ dimension: Dimension, to view: View) -> [LayoutConstraint] {
+        translatesAutoresizingMaskIntoConstraints = false
+        var constraints = [LayoutConstraint]()
+        if dimension.isWidth { constraints.append(widthAnchor.constraint(equalTo: view.widthAnchor)) }
+        if dimension.isHeight { constraints.append(heightAnchor.constraint(equalTo: view.heightAnchor)) }
         LayoutConstraint.activate(constraints)
         return constraints
     }
