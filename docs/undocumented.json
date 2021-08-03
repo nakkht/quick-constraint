@@ -1,48 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/nakkht/dev/quick-constraint/Sources/QuickConstraint/Dimension.swift",
-      "line": 20,
-      "symbol": "Dimension.width",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/nakkht/dev/quick-constraint/Sources/QuickConstraint/Dimension.swift",
-      "line": 21,
-      "symbol": "Dimension.height",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/nakkht/dev/quick-constraint/Sources/QuickConstraint/Dimension.swift",
-      "line": 22,
-      "symbol": "Dimension.size",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/nakkht/dev/quick-constraint/Sources/QuickConstraint/StackView.swift",
-      "line": 37,
-      "symbol": "StackView.init(axis:alignment:distribution:spacing:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/nakkht/dev/quick-constraint/Sources/QuickConstraint/StackView.swift",
-      "line": 48,
-      "symbol": "StackView.addArrangedSubviews(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/nakkht/dev/quick-constraint/Sources/QuickConstraint/StackView.swift",
-      "line": 53,
-      "symbol": "StackView.addArrangedSubviews(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/nakkht/dev/quick-constraint/Sources/QuickConstraint/View+AutoLayout.swift",
       "line": 117,
       "symbol": "View.pinToTopLeading(of:margin:isActive:)",

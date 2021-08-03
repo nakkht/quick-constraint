@@ -18,27 +18,26 @@
 
 import UIKit
 
-/// :nodoc:
-public typealias Alignment = UIStackView.Alignment
-/// :nodoc:
-public typealias StackView = UIStackView
-/// :nodoc:
-public typealias StackAxis = NSLayoutConstraint.Axis
-/// :nodoc:
-public typealias View = UIView
-#else
-
-import AppKit
-
 /// Alignment typealias: represents `UIStackView.Alignment` on `UIKit` and `NSLayoutConstraint.Attribute` on `AppKit`
-public typealias Alignment = NSLayoutConstraint.Attribute
+public typealias Alignment = UIStackView.Alignment
 
 /// StackView typealias: represents `UIStackView` on `UIKit` and `NSStackView` on `AppKit`
-public typealias StackView = NSStackView
+public typealias StackView = UIStackView
 
 /// StackAxis typealias: represents `NSLayoutConstraint.Axis` on `UIKit` and `NSUserInterfaceLayoutOrientation` on `AppKit`
-public typealias StackAxis = NSUserInterfaceLayoutOrientation
+public typealias StackAxis = NSLayoutConstraint.Axis
 
 /// View typealias: represents `UIView` on `UIKit` and `NSView` on `AppKit`
+public typealias View = UIView
+#else
+/// :nodoc:
+import AppKit
+/// :nodoc:
+public typealias Alignment = NSLayoutConstraint.Attribute
+/// :nodoc:
+public typealias StackView = NSStackView
+/// :nodoc:
+public typealias StackAxis = NSUserInterfaceLayoutOrientation
+/// :nodoc:
 public typealias View = NSView
 #endif

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LayoutConstraint Extension Reference</title>
+    <title>UICollectionReusableView Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/LayoutConstraint" class="dashAnchor"></a>
-    <a title="LayoutConstraint Extension Reference"></a>
+    <a name="//apple_ref/swift/Extension/UICollectionReusableView" class="dashAnchor"></a>
+    <a title="UICollectionReusableView Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">QuickConstraint 0.9.0 Docs</a> (85% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">QuickConstraint Reference</a>
         <img id="carat" src="../img/carat.png" />
-        LayoutConstraint Extension Reference
+        UICollectionReusableView Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -87,15 +87,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>LayoutConstraint</h1>
+            <h1>UICollectionReusableView</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">UICollectionReusableView</span></code></pre>
 
                 </div>
               </div>
-            <p>Extensions for making operations on <code>NSLayoutConstraint</code> less vebose</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -103,9 +102,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So18NSLayoutConstraintC05QuickB0E9activatedABvp"></a>
-                    <a name="//apple_ref/swift/Property/activated" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So18NSLayoutConstraintC05QuickB0E9activatedABvp">activated</a>
+                    <a name="/s:So24UICollectionReusableViewC15QuickConstraintE18reusableIdentifierSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/reusableIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So24UICollectionReusableViewC15QuickConstraintE18reusableIdentifierSSvpZ">reusableIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -113,41 +112,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sets <code><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></code> <code>isActive</code> property to true and returns modified constraint.</p>
+                        <p>Generates a string identifier based on instance description.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">activated</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So18NSLayoutConstraintC05QuickB0E11deactivatedABvp"></a>
-                    <a name="//apple_ref/swift/Property/deactivated" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So18NSLayoutConstraintC05QuickB0E11deactivatedABvp">deactivated</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets <code><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></code> <code>isActive</code> property to false and returns modified constraint.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">deactivated</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint06LayoutB0a">LayoutConstraint</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">reusableIdentifier</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

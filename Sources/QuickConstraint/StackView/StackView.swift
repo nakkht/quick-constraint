@@ -23,6 +23,12 @@ import AppKit
 public extension StackView {
 
     #if os(iOS) || os(tvOS)
+    /// Convenience initializer for simple `UIStackView`.
+    /// - Parameters:
+    ///   - axis: `StackAxis` value specifying a horizontal or vertical layout constraint.
+    ///   - alignment: Alignment—the layout transverse to the stacking axis. Defaults to `.fill`.
+    ///   - distribution: Value describing the content layout along the stacking axis rules in `UIStackView`. Defaults to `.fill`.
+    ///   - spacing: Spacing beween content items in `UIStackView`. Defaults to 0.0
     convenience init(axis: StackAxis, alignment: Alignment = .fill, distribution: Distribution = .fill, spacing: CGFloat = 0) {
         self.init()
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -30,10 +36,16 @@ public extension StackView {
         self.distribution = distribution
         self.spacing = spacing
         self.axis = axis
-   }
-    #endif
+    }
 
-    #if os(macOS)
+    #else
+
+    /// Convenience initializer for simple `NSStackView`.
+    /// - Parameters:
+    ///   - axis: `NSUserInterfaceLayoutOrientation` value specifying a horizontal or vertical layout constraint.
+    ///   - alignment: Alignment—the layout transverse to the stacking axis.
+    ///   - distribution: Value describing the content layout along the stacking axis rules in `NSStackView`. Defaults to `.fill`.
+    ///   - spacing: Spacing beween content items in `UIStackView`. Defaults to 0.0
     convenience init(axis: StackAxis, alignment: Alignment, distribution: Distribution = .fill, spacing: CGFloat = 0) {
         self.init()
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -44,11 +56,15 @@ public extension StackView {
     }
     #endif
 
+    /// Convenience function to add array of views to `StackView`. Order in which views added to `StackView` is the same as in provided array.
+    /// - Parameter arrangedSubviews: Array of views to be added to `StackView`.
     @inline(__always)
     func addArrangedSubviews(_ arrangedSubviews: [View]) {
         arrangedSubviews.forEach { addArrangedSubview($0) }
     }
 
+    /// Convenience function to add number of views  to `StackView`. Order in which views added to `StackView` is the same as in provided array.
+    /// - Parameter arrangedSubviews: Variadic parameter of `View` arguments.
     @inline(__always)
     func addArrangedSubviews(_ arrangedSubviews: View...) {
         arrangedSubviews.forEach { addArrangedSubview($0) }

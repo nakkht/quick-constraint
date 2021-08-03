@@ -17,8 +17,9 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
-/// :nodoc:
 public extension UICollectionReusableView {
+
+    /// Generates a string identifier based on instance description.
     static var reusableIdentifier: String { String(describing: self) }
 }
 

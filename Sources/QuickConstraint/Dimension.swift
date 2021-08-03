@@ -17,8 +17,13 @@
 /// Enum providing definitions of dimension options.
 public enum Dimension {
 
+    /// Represents value in horizontal dimension.
     case width
+
+    /// Represents value in vertical dimension.
     case height
+
+    /// Represents value in horizontal and vertical dimensions.
     case size
 
     /// Determines whether or not enum instance involves width dimentsion.

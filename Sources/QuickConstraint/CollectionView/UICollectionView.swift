@@ -17,15 +17,24 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
-/// :nodoc:
 public extension UICollectionView {
 
+    /// Convenience initializer for simple `UICollectionView` with `UICollectionViewFlowLayout` layout.
+    /// - Parameters:
+    ///   - frame: The frame rectangle for the collection view. Passed as-is when creating `UICollectionView`. Defaults to `.zero`
+    ///   - delegate: Delegate to receive events from `UICollectionView`.
+    ///   - spacing: Spacing value in points between layed items. Defaults to 0.0
     convenience init(frame: CGRect = .zero, delegate: UICollectionViewDelegate, spacing: CGFloat = 0) {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = spacing
         self.init(frame: frame, delegate: delegate, layout: layout)
     }
 
+    /// Convenience initializer for `UICollectionView` with provided `UICollectionViewFlowLayout`
+    /// - Parameters:
+    ///   - frame: The frame rectangle for the collection view. Passed as-is when creating `UICollectionView`. Defaults to `.zero`
+    ///   - delegate: Delegate to receive events from `UICollectionView`.
+    ///   - layout: Custom `UICollectionViewFlowLayout` describing how to layout items in `UICollectionView`.
     convenience init(frame: CGRect = .zero, delegate: UICollectionViewDelegate, layout: UICollectionViewFlowLayout) {
         self.init(frame: frame, collectionViewLayout: layout)
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -35,12 +44,20 @@ public extension UICollectionView {
         self.delegate = delegate
     }
 
+    /// Convenience function to setup `UICollectionView` with reusable cell and data source.
+    /// - Parameters:
+    ///   - cellType: Single cell type to be used and reused within `UICollectionView`.
+    ///   - dataSource: Data source to provide data based on associated callbacks.
     func configureWith(_ cellType: UICollectionViewCell.Type, dataSource: UICollectionViewDataSource) {
         register(cellType, forCellWithReuseIdentifier: cellType.reusableIdentifier)
         self.dataSource = dataSource
         self.performBatchUpdates({})
     }
 
+    /// Convenience function to setup `UICollectionView` with reusable cells and data source.
+    /// - Parameters:
+    ///   - cellTypes: Array of cell types to be used and reused within `UICollectionView`.
+    ///   - dataSource: Data source to provide data based on associated callbacks.
     func configureWith(_ cellTypes: [UICollectionViewCell.Type], dataSource: UICollectionViewDataSource) {
         cellTypes.forEach { register($0, forCellWithReuseIdentifier: $0.reusableIdentifier) }
         self.dataSource = dataSource

@@ -14,7 +14,7 @@
     <a title="StackView Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">QuickConstraint 0.9.0 Docs</a> (73% documented)</p>
+        <p><a href="../index.html">QuickConstraint 0.9.0 Docs</a> (85% documented)</p>
         <p class="header-right"><a href="https://github.com/nakkht/quick-constraint"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -50,6 +50,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/StackView.html">StackView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionReusableView.html">UICollectionReusableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/View.html">View</a>
@@ -96,6 +102,88 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:So11UIStackViewC15QuickConstraintE4axis9alignment12distribution7spacingABSo08UILayoutD4AxisV_So0aB9AlignmentVSo0aB12DistributionV12CoreGraphics7CGFloatVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(axis:alignment:distribution:spacing:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UIStackViewC15QuickConstraintE4axis9alignment12distribution7spacingABSo08UILayoutD4AxisV_So0aB9AlignmentVSo0aB12DistributionV12CoreGraphics7CGFloatVtcfc">init(axis:<wbr>alignment:<wbr>distribution:<wbr>spacing:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience initializer for simple <code>UIStackView</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">axis</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint9StackAxisa">StackAxis</a></span><span class="p">,</span> <span class="nv">alignment</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint9Alignmenta">Alignment</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">fill</span><span class="p">,</span> <span class="nv">distribution</span><span class="p">:</span> <span class="kt">Distribution</span> <span class="o">=</span> <span class="o">.</span><span class="n">fill</span><span class="p">,</span> <span class="nv">spacing</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>axis</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Typealiases.html#/s:15QuickConstraint9StackAxisa">StackAxis</a></code> value specifying a horizontal or vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>alignment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Alignment—the layout transverse to the stacking axis. Defaults to <code>.fill</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>distribution</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value describing the content layout along the stacking axis rules in <code>UIStackView</code>. Defaults to <code>.fill</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>spacing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Spacing beween content items in <code>UIStackView</code>. Defaults to 0.0</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/"></a>
                     <a name="//apple_ref/swift/Method/init(axis:alignment:distribution:spacing:)" class="dashAnchor"></a>
                     <a class="token" href="#/">init(axis:<wbr>alignment:<wbr>distribution:<wbr>spacing:<wbr>)</a>
@@ -106,7 +194,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Convenience initializer for simple <code>NSStackView</code>.</p>
+
                       </div>
                     </section>
                   </div>
@@ -114,36 +203,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11NSStackViewC15QuickConstraintE4axis9alignment12distribution7spacingABSo32NSUserInterfaceLayoutOrientationV_So17NSLayoutAttributeVSo0aB12DistributionV12CoreGraphics7CGFloatVtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(axis:alignment:distribution:spacing:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11NSStackViewC15QuickConstraintE4axis9alignment12distribution7spacingABSo32NSUserInterfaceLayoutOrientationV_So17NSLayoutAttributeVSo0aB12DistributionV12CoreGraphics7CGFloatVtcfc">init(axis:<wbr>alignment:<wbr>distribution:<wbr>spacing:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">axis</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint9StackAxisa">StackAxis</a></span><span class="p">,</span> <span class="nv">alignment</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15QuickConstraint9Alignmenta">Alignment</a></span><span class="p">,</span> <span class="nv">distribution</span><span class="p">:</span> <span class="kt">Distribution</span> <span class="o">=</span> <span class="o">.</span><span class="n">fill</span><span class="p">,</span> <span class="nv">spacing</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So11NSStackViewC15QuickConstraintE19addArrangedSubviewsyySaySo6NSViewCGF"></a>
+                    <a name="/s:So11UIStackViewC15QuickConstraintE19addArrangedSubviewsyySaySo6UIViewCGF"></a>
                     <a name="//apple_ref/swift/Method/addArrangedSubviews(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11NSStackViewC15QuickConstraintE19addArrangedSubviewsyySaySo6NSViewCGF">addArrangedSubviews(_:<wbr>)</a>
+                    <a class="token" href="#/s:So11UIStackViewC15QuickConstraintE19addArrangedSubviewsyySaySo6UIViewCGF">addArrangedSubviews(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -151,7 +213,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Convenience function to add array of views to <code><a href="../Typealiases.html#/s:15QuickConstraint9StackViewa">StackView</a></code>. Order in which views added to <code><a href="../Typealiases.html#/s:15QuickConstraint9StackViewa">StackView</a></code> is the same as in provided array.</p>
 
                       </div>
                       <div class="declaration">
@@ -163,15 +225,34 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>arrangedSubviews</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of views to be added to <code><a href="../Typealiases.html#/s:15QuickConstraint9StackViewa">StackView</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11NSStackViewC15QuickConstraintE19addArrangedSubviewsyySo6NSViewCd_tF"></a>
+                    <a name="/s:So11UIStackViewC15QuickConstraintE19addArrangedSubviewsyySo6UIViewCd_tF"></a>
                     <a name="//apple_ref/swift/Method/addArrangedSubviews(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11NSStackViewC15QuickConstraintE19addArrangedSubviewsyySo6NSViewCd_tF">addArrangedSubviews(_:<wbr>)</a>
+                    <a class="token" href="#/s:So11UIStackViewC15QuickConstraintE19addArrangedSubviewsyySo6UIViewCd_tF">addArrangedSubviews(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -179,7 +260,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Convenience function to add number of views  to <code><a href="../Typealiases.html#/s:15QuickConstraint9StackViewa">StackView</a></code>. Order in which views added to <code><a href="../Typealiases.html#/s:15QuickConstraint9StackViewa">StackView</a></code> is the same as in provided array.</p>
 
                       </div>
                       <div class="declaration">
@@ -191,6 +272,25 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>arrangedSubviews</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Variadic parameter of <code><a href="../Typealiases.html#/s:15QuickConstraint4Viewa">View</a></code> arguments.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -199,7 +299,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://pgu.dev" target="_blank" rel="external">Paulius Gudonis</a>. All rights reserved. (Last updated: 2021-08-02)</p>
+          <p>&copy; 2021 <a class="link" href="https://pgu.dev" target="_blank" rel="external">Paulius Gudonis</a>. All rights reserved. (Last updated: 2021-08-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -4,8 +4,8 @@ github_url: https://github.com/nakkht/quick-constraint
 module: QuickConstraint
 output: docs
 theme: apple
-swift_build_tool: spm
-build_tool_arguments: [-Xswiftc, -swift-version, -Xswiftc, "5"]
+swift_build_tool: xcodebuild
+build_tool_arguments: [-scheme, "QuickConstraint", -sdk, "iphoneos"]
 module_version: 0.9.0
 clean: true
 min_acl: internal
