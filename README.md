@@ -11,9 +11,9 @@ Extension functions for making layout programmatically easier and faster
 * [Paulius Gudonis](https://pgu.dev)
 
 ## License
-This repository is under the **Apache v2.0** license. [Find it here](https://github.com/nakkht/quick-constraint/blob/master/LICENSE).
+This repository is under the **Apache v2.0** license. [Find it here](https://github.com/nakkht/quick-constraint/blob/main/LICENSE).
 
-    Copyright 2020 Paulius Gudonis
+    Copyright 2021 Paulius Gudonis
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
