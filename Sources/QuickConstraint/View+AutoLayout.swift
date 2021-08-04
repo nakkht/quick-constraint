@@ -231,7 +231,7 @@ public extension View {
         LayoutConstraint.activate(constraints)
         return constraints
     }
-    
+
     /// Creates constraints for width/height/size dimensions based on another view's width/height/size.
     /// - Parameters:
     ///   - dimension: Dimension type to be used for determining which dimension constraints to generate. Use `size` to generate width and height constraints simultaneously..
