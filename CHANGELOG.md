@@ -2,6 +2,11 @@
 
 All notable changes to QuickConstraint project.
 
+## v0.10.0 - [2021-08-05]
+
+Added
+* Missing multiplier for dimension constraint set
+
 ## v0.9.0 - [2021-08-04]
 
 Added
