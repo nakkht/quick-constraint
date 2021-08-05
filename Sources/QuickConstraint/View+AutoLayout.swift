@@ -236,13 +236,14 @@ public extension View {
     /// - Parameters:
     ///   - dimension: Dimension type to be used for determining which dimension constraints to generate. Use `size` to generate width and height constraints simultaneously..
     ///   - view: Parent of sibling view to use as a reference for constraints.
+    ///   - multiplier: The multiplier constant for the constraint.
     /// - Returns: Generated active constraints.
     @discardableResult
-    func set(_ dimension: Dimension, to view: View) -> [LayoutConstraint] {
+    func set(_ dimension: Dimension, to view: View, multiplier: CGFloat = 1.0) -> [LayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
         var constraints = [LayoutConstraint]()
-        if dimension.isWidth { constraints.append(widthAnchor.constraint(equalTo: view.widthAnchor)) }
-        if dimension.isHeight { constraints.append(heightAnchor.constraint(equalTo: view.heightAnchor)) }
+        if dimension.isWidth { constraints.append(widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: multiplier)) }
+        if dimension.isHeight { constraints.append(heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: multiplier)) }
         LayoutConstraint.activate(constraints)
         return constraints
     }
