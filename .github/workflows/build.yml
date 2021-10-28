@@ -13,17 +13,17 @@ env:
   SCHEME: QuickConstraint
   
 jobs:
-  build-latest:
+  build-iOS-14:
     strategy:
       matrix:
         destination: 
-          - 'platform=iOS Simulator,name=iPhone 12,OS=14.4'
-          - 'platform=iOS Simulator,name=iPad Pro (12.9-inch) (4th generation),OS=14.4'
-          - 'platform=tvOS Simulator,name=Apple TV,OS=14.3'
+          - 'platform=iOS Simulator,name=iPhone 12,OS=14.5'
+          - 'platform=iOS Simulator,name=iPad Pro (12.9-inch) (4th generation),OS=14.5'
+          - 'platform=tvOS Simulator,name=Apple TV,OS=14.5'
           - 'platform=OS X,arch=x86_64'
     runs-on: macos-10.15
     env:
-      DEVELOPER_DIR: /Applications/Xcode_12.4.app
+      DEVELOPER_DIR: /Applications/Xcode_12.5.1.app
     steps:
       - name: Checkout
         uses: actions/checkout@v2
