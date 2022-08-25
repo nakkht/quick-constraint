@@ -46,7 +46,7 @@ jobs:
         destination:
           - 'platform=iOS Simulator,name=iPhone 13,OS=15.5'
           - 'platform=iOS Simulator,name=iPad Pro (12.9-inch) (5th generation),OS=15.5'
-          - 'platform=tvOS Simulator,name=Apple TV,OS=15.5'
+          - 'platform=tvOS Simulator,name=Apple TV,OS=15.4'
           - 'platform=OS X,arch=x86_64'
     runs-on: macos-12
     env:
