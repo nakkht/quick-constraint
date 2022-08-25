@@ -23,6 +23,33 @@ jobs:
           - 'platform=OS X,arch=x86_64'
     runs-on: macos-12
     env:
+      DEVELOPER_DIR: /Applications/Xcode_14.0.app
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Lint
+        run: swiftlint --strict
+      - name: Cache build
+        uses: actions/cache@v2
+        with:
+          path: |
+            .spm
+          key: ${{ runner.os }}-cache
+      - name: Build
+        run: |
+          set -o pipefail
+          xcodebuild build -workspace $WORKSPACE -scheme $SCHEME -destination "${{ matrix.destination }}" | xcpretty
+
+  build-iOS-15:
+    strategy:
+      matrix:
+        destination:
+          - 'platform=iOS Simulator,name=iPhone 13,OS=15.5'
+          - 'platform=iOS Simulator,name=iPad Pro (12.9-inch) (5th generation),OS=15.5'
+          - 'platform=tvOS Simulator,name=Apple TV,OS=15.5'
+          - 'platform=OS X,arch=x86_64'
+    runs-on: macos-12
+    env:
       DEVELOPER_DIR: /Applications/Xcode_13.4.1.app
     steps:
       - name: Checkout
